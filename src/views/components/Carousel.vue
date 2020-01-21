@@ -98,6 +98,22 @@ export default {
 };
 </script>
 <style lang="scss">
+#app {
+  background-color: #f5f5f5;
+}
+div#carousel1___BV_inner_::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  bottom: -10px;
+  z-index: 1;
+  background-image: url('/img/brand/carousel-before.png');
+  background-position: 0 bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 .carousel {
   .carousel-item {
     max-height: 600px;
