@@ -2,13 +2,13 @@
     <header class="header-global">
         <base-nav class="navbar-main" transparent type="" effect="light" expand>
             <router-link slot="brand" class="navbar-brand mr-lg-5" to="/">
-                <img src="img/brand/logo.png">
+                <img src="img/brand/iansa-logo.png">
             </router-link>
 
             <div class="row" slot="content-header" slot-scope="{closeMenu}">
                 <div class="col-6 collapse-brand">
                     <a href="../index.html">
-                        <img src="img/brand/blue.png">
+                        <img src="img/brand/iansa-logo.png">
                     </a>
                 </div>
                 <div class="col-6 collapse-close">
