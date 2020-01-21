@@ -32,27 +32,22 @@
                                             placeholder="Email"
                                             addon-left-icon="ni ni-email-83">
                                 </base-input>
-                                <base-input alternative
-                                            type="password"
-                                            placeholder="Password"
-                                            addon-left-icon="ni ni-lock-circle-open">
-                                </base-input>
-
                                 <div class="text-center">
-                                    <base-button type="primary" class="my-4">Entrar</base-button>
+                                    <base-button type="primary" class="my-4">ENVIAR</base-button>
                                 </div>
                             </form>
                         </template>
                     </card>
                     <div class="row mt-3">
                         <div class="col-6">
-                            <router-link to="/forgotpassword" class="text-light">
-                                <small>Forgot password?</small>
+                            <router-link to="/login" class="text-light">
+                                <small>Login</small>
                             </router-link>
+               
                         </div>
                         <div class="col-6 text-right">
                             <router-link to="/" class="text-light">
-                                <small>Home</small>
+                                <small>home</small>
                             </router-link>
                         </div>
                     </div>

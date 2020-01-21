@@ -50,10 +50,10 @@
             </ul>
             <ul class="navbar-nav align-items-lg-center ml-lg-auto">
                 <li class="nav-item">
-                    <a class="nav-link nav-link-icon" href="https://www.facebook.com/casadeapoioiansa/" target="_blank" rel="noopener"
-                       data-toggle="tooltip" title="Like us on Facebook">
-                        <i class="fa fa-facebook-square"></i>
-                        <span class="nav-link-inner--text d-lg-none">Facebook</span>
+                    <a class="nav-link nav-link-icon" href="https://loja.iansa.org.br/" target="_blank" rel="noopener"
+                       data-toggle="tooltip" title="Like us on Bazar virtual">
+                        <i class="fa fa-shopping-cart"></i>
+                        <span class="nav-link-inner--text d-lg-none">Bazar virtual</span>
                     </a>
                 </li>
                 <li class="nav-item">

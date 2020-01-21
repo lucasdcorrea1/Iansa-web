@@ -23,13 +23,25 @@
             <div class="col-sm-12" style="margin-bottom:16px">
                 <h3 class="text-primary font-weight-light">ONDE ESTAMOS!</h3>
             </div>
-                <div class="col-md-4" style="margin:0">
+                <div class="col-md-4 contact" style="margin:0">
                     <h4 class="text-primary font-weight-light">Unidade I</h4>
-                    <h5 class="mb-0 font-weight-light"><i class="fa fa-phone"></i><span class="phone">(16) 3702-4042</span></h5>
+                    <h5 class="mb-0 font-weight-light">
+                        <span>Av.Luís Vaz de Camões - 2901</span>
+                    </h5>
+                    <h5 class="mb-0 font-weight-light locale">Jardim Eden - Franca-SP</h5>
+                    <h5 class="mb-0 font-weight-light phone">
+                        <span class="phone">(16) 3409-261</span>
+                    </h5>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 contact">
                     <h4 class="text-primary font-weight-light">Unidade II</h4>
-                    <h5 class="mb-0 font-weight-light"><i class="fa fa-phone"></i><span class="phone">(16) 3702-4042</span></h5>
+                    <h5 class="mb-0 font-weight-light">
+                        <span>R.João de Góes Conrado - 2570</span>
+                    </h5> 
+                    <h5 class="mb-0 font-weight-light locale">São josé, Franca-SP</h5>
+                    <h5 class="mb-0 font-weight-light phone">
+                        <span class="phone-text">(16) 3702-4042</span>
+                    </h5>
                 </div>
                 <div class="col-md-4 text-lg-center btn-wrapper">
                     <a target="_blank" rel="noopener" href="https://www.facebook.com/casadeapoioiansa/"
@@ -65,15 +77,8 @@
                 <div class="col-md-6">
                     <ul class="nav nav-footer justify-content-end">
                         <li class="nav-item">
-                            <a href="https://www.creative-tim.com/presentation" class="nav-link" target="_blank" rel="noopener">About
-                                Us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="https://loja.iansa.org.br/www.iansa.org.br" class="nav-link" target="_blank" rel="noopener">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="https://github.com/creativetimofficial/argon-design-system/blob/master/LICENSE.md"
-                               class="nav-link" target="_blank" rel="noopener">MIT License</a>
+                            <a href=""
+                               class="nav-link" target="_blank" rel="noopener">contato@iansa.org.br</a>
                         </li>
                     </ul>
                 </div>
@@ -96,11 +101,14 @@ export default {
     .text-primary {
         color: #673AB7 !important
     }
-    .phone {
-        font-size: 18px;
-        position: relative;
-        margin-left: 10px;
-        top: -6px;
+    .phone{
+        margin-top: 16px;
+        span {
+            font-size: 18px;
+            position: relative;
+            top: -6px;
+        }
     }
+
 }
 </style>
