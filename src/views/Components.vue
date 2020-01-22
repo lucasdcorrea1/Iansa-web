@@ -1,6 +1,8 @@
 <template>
     <div>
-       <carousel></carousel>
+      <carousel></carousel>
+      <donate></donate>
+      <Team></Team>
         <!-- <hero></hero>
         <basic-elements></basic-elements>
         <inputs></inputs>
@@ -24,6 +26,8 @@ import Carousel from "./components/Carousel";
 import Icons from "./components/Icons";
 import Examples from "./components/Examples";
 import DownloadSection from "./components/DownloadSection";
+import Donate from "./components/Donate";
+import Team from "./components/Team";
 
 export default {
   name: "components",
@@ -37,7 +41,9 @@ export default {
     Carousel,
     Icons,
     Examples,
-    DownloadSection
+    DownloadSection,
+    Donate,
+    Team
   }
 };
 </script>

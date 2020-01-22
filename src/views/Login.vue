@@ -19,7 +19,7 @@
                           class="border-0">
                         <template>
                             <div class="text-muted text-center mb-3">
-                                <img src="../../public/img/brand/logo.png" class="logo" alt="..." />
+                                <img src="../../public/img/brand/iansa-logo.png" class="logo" alt="..." />
                             </div>
                         </template>
                         <template>
