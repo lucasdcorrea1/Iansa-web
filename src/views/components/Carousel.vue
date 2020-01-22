@@ -57,13 +57,24 @@ export default {
 #app {
   background-color: #f5f5f5;
 }
+div#carousel1___BV_inner_::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-image: url('/img/brand/carousel-before.png');
+  background-position: 0 top;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 div#carousel1___BV_inner_::before {
   content: '';
   position: absolute;
   left: 0;
   width: 100%;
   height: 100%;
-  // bottom: -10px;
   z-index: 1;
   background-image: url('/img/brand/carousel-before.png');
   background-position: 0 bottom;
@@ -72,6 +83,25 @@ div#carousel1___BV_inner_::before {
 }
 
 .carousel {
+  user-select: none;
+  a {
+    &.carousel-control-next,
+    &.carousel-control-prev {
+      z-index: 1;
+      padding-bottom: 15%;
+      span {
+        color: #000;
+      }
+    }
+  }
+  .carousel-caption {
+    bottom: 20%;
+    font-weight: bold;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.24), 0 1px 2px rgba(0,0,0,0.36);
+    // -webkit-text-fill-color: white;
+    // -webkit-text-stroke-width: 2px;
+    // -webkit-text-stroke-color: #ec95e1;
+  }
   .carousel-indicators {
     li {
       background-color: #ec95e1;
