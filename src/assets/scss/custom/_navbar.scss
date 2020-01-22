@@ -1,3 +1,8 @@
+.navbar {
+    .container {
+        align-items: flex-start;
+    }
+}
 .navbar-nav {
     .nav-link {
         font-size: $navbar-nav-link-font-size;
