@@ -45,7 +45,8 @@
                     <router-link to="/landing" class="dropdown-item">Landing</router-link>
                     <router-link to="/profile" class="dropdown-item">Profile</router-link>
                     <router-link to="/login" class="dropdown-item">Login</router-link>
-                    <router-link to="/register" class="dropdown-item">Register</router-link>
+                    <router-link v-if="logged" to="/register" class="dropdown-item">Cadastrar Usuário</router-link>
+                    <router-link v-if="logged" to="/registerEvents" class="dropdown-item">Cadastrar Eventos</router-link>
                 </base-dropdown>
             </ul>
             <ul class="navbar-nav align-items-lg-center ml-lg-auto">
@@ -77,7 +78,19 @@ export default {
     BaseNav,
     CloseButton,
     BaseDropdown
-  }
+  },
+  data () {
+    return {
+      logged: false
+    };
+  },
+  created () {
+    try {
+       this.logged = JSON.parse(localStorage.getItem("user")).token ? true : false
+    } catch (error) {
+        this.logged = false
+    }
+  },
 };
 </script>
 <style>

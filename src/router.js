@@ -6,6 +6,7 @@ import Components from "./views/Components.vue";
 import Landing from "./views/Landing.vue";
 import Login from "./views/Login.vue";
 import Register from "./views/Register.vue";
+import RegisterEvents from "./views/RegisterEvents.vue";
 import Profile from "./views/Profile.vue";
 import ForgotPassword from "./views/ForgotPassword.vue"; 
 
@@ -40,7 +41,7 @@ export default new Router({
       }
     },
     {
-      path: "/ForgotPassword",
+      path: "/forgotPassword",
       name: "ForgotPassword",
       components: {
         default: ForgotPassword
@@ -49,6 +50,15 @@ export default new Router({
     {
       path: "/register",
       name: "register",
+      components: {
+        header: AppHeader,
+        default: Register,
+        footer: AppFooter
+      }
+    },
+    {
+      path: "/registerEvents",
+      name: "registerEvents",
       components: {
         header: AppHeader,
         default: Register,
