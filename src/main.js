@@ -8,33 +8,22 @@ Vue.config.productionTip = false;
 Vue.use(Argon);
 
 
-// router.beforeEach((to, from, next) => {
-  // redirect to login page if not logged in and trying to access a restricted page
-  // const publicPages = [
-  //   "",
-  //   "register"
-  // ];
-//   const path = to.path.split("/")[1].toString();
-//   const authRequired = !publicPages.includes(path);
-//   const loggedIn = JSON.parse(localStorage.getItem("user"));
+router.beforeEach((to, from, next) => {
+  //redirect to login page if not logged in and trying to access a restricted page
+  const publicPages = [
+    "registerEvents",
+    "register"
+  ];
+  const path = to.path.split("/")[1].toString();
+  const authRequired = publicPages.includes(path);
+  const loggedIn = JSON.parse(localStorage.getItem("user"));
 
-//   if (authRequired && !loggedIn) {
-//     return next("/expired");
-//   }
-
-//   if (to.matched.some(record => record.meta.sa)) {
-//     if (loggedIn.data.code == "000" && loggedIn.data.profile == "1") {
-//       next();
-//     } else {
-//       store.dispatch(
-//         "alert/error",
-//         "Você não possui permissão para visualizar o conteúdo"
-//       );
-//     }
-//   } else {
-//     next();
-//   }
-// });
+  if (authRequired && !loggedIn) {
+    return next("/");
+  } else {
+    next();
+  }
+});
 
 new Vue({
   router,

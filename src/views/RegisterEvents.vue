@@ -19,7 +19,7 @@
                           class="border-0">
                         <template>
                             <div class="text-muted text-center mb-3">
-                                <small>Cadastre o Usuário com</small>
+                                <small>CADASTRAR EVENTOS</small>
                             </div>
                             <div class="btn-wrapper text-center">
                                 <base-button type="neutral">
@@ -34,6 +34,9 @@
                             </div>
                         </template>
                         <template>
+                            <div class="text-center text-muted mb-4">
+                                <small>Or sign up with credentials</small>
+                            </div>
                             <form role="form">
                                 <base-input alternative
                                             class="mb-3"
