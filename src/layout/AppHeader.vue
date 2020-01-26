@@ -8,7 +8,7 @@
             <div class="row" slot="content-header" slot-scope="{closeMenu}">
                 <div class="col-6 collapse-brand">
                     <a href="https://demos.creative-tim.com/vue-argon-design-system/documentation/">
-                        <img src="img/brand/blue.png">
+                        <img src="img/brand/iansa-logo.png">
                     </a>
                 </div>
                 <div class="col-6 collapse-close">
@@ -39,7 +39,7 @@
                 </base-dropdown>
                 <base-dropdown tag="li" class="nav-item">
                     <a slot="title" href="#" class="nav-link" data-toggle="dropdown" role="button">
-                        <i class="ni ni-collection d-lg-none"></i>
+                        <!-- <i class="ni ni-collection d-lg-none"></i> -->
                         <span class="nav-link-inner--text">Examples</span>
                     </a>
                     <router-link to="/landing" class="dropdown-item">Landing</router-link>

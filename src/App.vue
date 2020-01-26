@@ -6,6 +6,12 @@
           <router-view/>
         </fade-transition>
       </main>
+      <div>
+        <a href="https://pag.ae/bhg8d0n" target="blank" class="fab">
+          <img src="img/brand/icons/hand.svg">
+          Quero doar
+        </a>
+      </div>
     <router-view name="footer"></router-view>
   </div>
 </template>
@@ -18,3 +24,26 @@ export default {
   }
 };
 </script>
+<style lang="scss" scoped>
+  .fab {
+    position: fixed;
+    display: flex;
+    right: 16px;
+    bottom: 16px;
+    padding: 15px;
+    z-index: 1;
+    border-radius: 100px;
+    justify-content: center;
+    align-items: center;
+    background: #ab4a9e;
+    color: #f5f5f5;
+    font-weight: bold;
+    border: 0;
+    box-shadow: 0 3px 4px 0 rgba(0,0,0,0.14), 0 3px 3px -2px rgba(0,0,0,0.12), 0 1px 8px 0 rgba(0,0,0,0.20);
+    outline: none;
+    img {
+      width: 34px;
+      margin-right: 10px;
+    }
+  }
+</style>

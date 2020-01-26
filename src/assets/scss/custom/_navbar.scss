@@ -77,11 +77,17 @@
                 }
             }
         }
-        .nav-link {
-            padding-top: $navbar-nav-link-padding-y;
-            padding-bottom: $navbar-nav-link-padding-y;
-            border-radius: $navbar-nav-link-border-radius;
-
+        .nav-link:not(.nav-link-icon) {
+            &:hover {
+                // background-color: #f64c65;
+                background-color: #f88e9e;
+            }
+            // background-color: #f88e9e;
+            border-radius: 100px;
+            padding: 8px 16px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border: 1px solid;
+            
             i {
                 margin-right: .625rem;
             }

@@ -1,5 +1,5 @@
 <template>
-    <section class="section section section-shaped my-0 overflow-hidden">
+    <section class="section section section-shaped my-0 overflow-hidden team">
             <div class="shape shape-style-1 bg-gradient-warning shape-skew">
                 <span></span>
                 <span></span>
@@ -64,4 +64,8 @@
 export default {};
 </script>
 <style lang="scss">
+    section.team {
+        background-color: #ab4a9e;
+        padding-top: 100px;
+    }
 </style>
