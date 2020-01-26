@@ -1,110 +1,111 @@
 <template>
- <section class="section section section-shaped my-0 overflow-hidden testec">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-12">
-                        <div class="row row-grid text-center">
-                            <div class="col-lg-4">
-                                <card class="border-0" hover shadow body-classes="py-5">
-                                     <img src="../../../public/img/brand/help.png"/>
-                                    <h6 class="text-uppercase"
-                                     style="color: #f64c65">plano Carinho</h6>
-                                    <div class="col-lg-12">
-                                        <h3 class="donate-value" rounded>R$25,00</h3>
-                                    </div>
-                                    <div>
-                                        <badge 
-                                            type="primary" 
-                                            style="color: #f64c65" 
-                                            rounded>
-                                            Mensais
-                                        </badge>
-                                    </div>
-                                    <base-button  
-                                        tag="a" 
-                                        target="_blank" 
-                                        href="https://pag.ae/blg8gQG" 
-                                        class="mt-4 btn-donate"
-                                        style="background-color: #f64c65; width: 100%;">
-                                       Assinar
-                                    </base-button>
-                                </card>
-                            </div>
-                            <div class="col-lg-4">
-                                <card class="border-0" hover shadow body-classes="py-5">
-                                    <img src="../../../public/img/brand/happiness.png"/>
-                                    <h6 class="text-uppercase"
-                                    style="color: #1aae6f">Plano Feliciade</h6>
-                                    <div class="col-lg-12">
-                                        <h3 class="donate-value" style="color:#1aae6f" rounded>R$50,00</h3>
-                                    </div>
-                                    <div>
-                                        <badge  
-                                            type="primary"
-                                            style="color: #1aae6f"
-                                            rounded>
-                                            Mensais
-                                        </badge>
-                                    </div>
-                                    <base-button  
-                                        tag="a" 
-                                        target="_blank" 
-                                        href="https://pag.ae/bkg8gPn" 
-                                        class="mt-4 btn-donate"
-                                        style="background-color: #1aae6f; width: 100%;">
-                                       Assinar
-                                    </base-button>
-                                </card>
-                            </div>
-                            <div class="col-lg-4">
-                                <card class="border-0" hover shadow body-classes="py-5">
-                                    <img src="../../../public/img/brand/love.png"/>
-                                    <h6 class="text-uppercase"
-                                    style="color: #f64c65">plano Amor</h6>
-                                    <div class="col-lg-12">
-                                        <h3 class="donate-value" rounded>R$100,00</h3>
-                                    </div>
-                                    <div>
-                                        <badge 
-                                            type="primary" 
-                                            style="color: #f64c65" 
-                                            rounded>Mensais
-                                        </badge>
-                                    </div>
-                                    <base-button  tag="a" 
-                                        target="_blank" 
-                                        href="https://pag.ae/bfg8gNp" 
-                                        class="btn-donate mt-4"
-                                        style="background-color: #f64c65; width: 100%;">
-                                       Assinar
-                                    </base-button>
-                                </card>
-                            </div>
-                        </div>
-                    </div>
+  <section class="section section section-shaped my-0 overflow-hidden">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-12">
+          <div class="row row-grid text-center">
+            <div class="col-lg-4 font-title" v-for="(item, index) in cards" :key="index">
+              <card 
+                class="border-0"
+                hover
+                shadow
+                body-classes="py-5"
+                @click.native="handleAction(item.btnLink)"
+                :style="`background-image: ${item.bgImage}`">
+                <img :src="`img/brand/${item.img}`" />
+                <h6 class="text-uppercase">{{item.title}}</h6>
+                <div class="col-lg-12">
+                  <h3 class="donate-value" rounded>{{item.value}}</h3>
                 </div>
+                <div>
+                  <badge type="primary" rounded>Mensais</badge>
+                </div>
+                <base-button
+                  tag="a"
+                  target="_blank"
+                  :href="item.btnLink"
+                  class="mt-4 btn-donate"
+                >
+                  Assinar
+                </base-button>
+              </card>
+              <!-- <pre> {{cards}} </pre> -->
             </div>
-        </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
 <script>
-    export default {};
+export default {
+  data() {
+    return {
+      cards: [
+        {
+          img: 'help.png',
+          title: 'Plano carinho',
+          value: 'R$25,00',
+          btnLink: 'https://pag.ae/blg8gQG',
+          color: '#f64c65',
+          bgImage: 'linear-gradient(45deg, #2dce89 0, #2dcecc 100%)',
+        },
+        {
+          img: 'happiness.png',
+          title: 'Plano Feliciade',
+          value: 'R$50,00',
+          btnLink: 'https://pag.ae/bkg8gPn',
+          color: ' #1aae6f;',
+          bgImage: 'linear-gradient(45deg, #fb6340 0, #fbb140 100%)',
+        },
+        {
+          img: 'love.png',
+          title: 'Plano Amor',
+          value: 'R$100,00',
+          btnLink: 'https://pag.ae/bfg8gNp',
+          color: '#f64c65',
+          bgImage: 'linear-gradient(45deg, #2196F3 0px, #4FC3F7 70%)',
+        },
+      ]
+    };
+  },
+  methods: {
+    handleAction(link) {
+      window.open(link,'_blank');
+    }
+  }
+};
 </script>
 <style lang="scss">
-    .card-body {
-        img {
-            max-width: 70px;
-        }
-        .donate-value { 
-            font-size: 40px;
-            font-weight: 600;
-            color: #f64c65;
-        }
-        .btn-donate {
-            border-radius: 36px;
-            border: none;
-            &:hover {
-                background-color: #f88e9e !important;
-            }
-        }
+.card-body {
+  cursor: pointer;
+  img {
+    max-width: 70px;
+  }
+  h6 {
+    color: #f5f5f5;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 16px;
+  }
+  span {
+    color: #FF5722;
+    background-color: #f5f5f5;
+    font-size: 18px;
+  }
+  .donate-value {
+    font-size: 52px;
+    font-weight: 600;
+    color: #f5f5f5;
+  }
+  .btn-donate {
+    border-radius: 36px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.33);
+    width: 100%;
+    &:hover {
+     background-color: rgba(255, 255, 255, 0.55);
     }
+  }
+}
 </style>

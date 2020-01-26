@@ -2,7 +2,7 @@
   <div class="col-lg-12" style="padding: 0">
     <div class="overflow-hidden">
       <b-carousel class="carousel" id="carousel1" controls indicators>
-        <b-carousel-slide 
+        <b-carousel-slide class="font-title"
           v-for="(slide, index) in slides" :key="index"
           :img-src="slide.url">
           {{slide.title}}
