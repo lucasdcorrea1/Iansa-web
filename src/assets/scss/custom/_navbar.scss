@@ -80,13 +80,19 @@
         .nav-link:not(.nav-link-icon) {
             &:hover {
                 // background-color: #f64c65;
-                background-color: #f88e9e;
+                // background-color: #f88e9e;
+                color: #f88e9e!important;
             }
             // background-color: #f88e9e;
+            // border-radius: 100px;
+            // padding: 8px 16px;
+            // background-color: rgba(255, 255, 255, 0.2);
+            // border: 1px solid;
             border-radius: 100px;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 13px;
             padding: 8px 16px;
-            background-color: rgba(255, 255, 255, 0.2);
-            border: 1px solid;
             
             i {
                 margin-right: .625rem;
