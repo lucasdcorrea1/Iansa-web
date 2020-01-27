@@ -30,9 +30,8 @@ export default {
   }
   .fab {
     &:hover {
-      color: rgba(255, 255, 255, 0.7);
-      // background: #ab4a9e;
-      opacity: .5;
+      color: #ffffff;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     }
     position: fixed;
     display: flex;
@@ -43,7 +42,7 @@ export default {
     border-radius: 100px;
     justify-content: center;
     align-items: center;
-    // background: #ab4a9e;
+    transition: 200ms ease;
     background-image: linear-gradient(45deg, #ec95e1 0, #ab4a9e 70%);
     color: #f5f5f5;
     font-weight: bold;
