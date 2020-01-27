@@ -1,5 +1,5 @@
 <template>
-  <section class="login-background section section-shaped section-lg my-0">
+  <section class="section section-shaped section-lg my-0">
     <div class="shape shape-style-1 bg-gradient-default">
       <span></span>
       <span></span>
@@ -23,7 +23,7 @@
             <template>
               <div class="text-muted text-center mb-3">
                 <img
-                  src="../../public/img/brand/iansa-logo.png"
+                  src="../../public/img/brand/logo.png"
                   class="logo"
                   alt="..."
                 />
@@ -133,15 +133,15 @@ export default {
 };
 </script>
 <style lang="scss">
-img.logo {
-  width: 50%;
+div.logo {
+  width: 50% !important;
 }
 div.container {
   top: -100px;
 }
-.login-background {
-  background-size: cover;
-  background-color: #673ab7;
-  min-height: 100vh;
-}
+// .login-background {
+//   background-size: cover;
+//   background-color: #673ab7;
+//   min-height: 100vh;
+// }
 </style>

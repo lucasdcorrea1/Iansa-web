@@ -95,6 +95,17 @@
                         <span class="nav-link-inner--text d-lg-none">Youtube</span>
                     </a>
                 </li>
+                <li  v-if="logged"  class="nav-item">
+                    <a target="_blank" rel="noopener"
+                    style="color: red" 
+                      class="nav-link nav-link-icon" data-toggle="tooltip"
+                      v-on:click="sign"
+                    
+                       data-original-title="Star on Github">
+                        <i class="fa fa-sign-in"></i>
+                        <span class="nav-link-inner--text d-lg-none">Sair</span>
+                    </a>
+                </li>
             </ul>
         </base-nav>
     </header>
@@ -115,6 +126,12 @@ export default {
       logged: false
     };
   },
+   methods: {
+    sign: function (event) {
+        localStorage.removeItem("user");
+        location.reload();
+    },
+   },
   created () {
     try {
        this.logged = JSON.parse(localStorage.getItem("user")).token ? true : false

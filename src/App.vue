@@ -25,6 +25,10 @@ export default {
 };
 </script>
 <style lang="scss">
+ body {
+    background-color: #f5f5f5 !important;  
+ }
+
   .font-title {
     font-family: 'Indie Flower', cursive;
   }
@@ -43,7 +47,7 @@ export default {
     border-radius: 100px;
     justify-content: center;
     align-items: center;
-    // background: #ab4a9e;
+    background: #ab4a9e;
     background-image: linear-gradient(45deg, #ec95e1 0, #ab4a9e 70%);
     color: #f5f5f5;
     font-weight: bold;
