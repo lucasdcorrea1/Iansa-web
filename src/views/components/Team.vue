@@ -22,9 +22,12 @@
                                       rounded></icon>
                             </div>
                             <div class="pl-4">
-                                <h4 class="display-3 text-white">Modern Interface</h4>
-                                <p class="text-white">The Arctic Ocean freezes every winter and much of the sea-ice then
-                                    thaws every summer, and that process will continue whatever happens.</p>
+                                <h4 class="display-3 text-white">I.A.N.S.A</h4>
+                                <p class="text-white">
+                                   O I.A.N.S.A., Instituição de Apoio Nossa Senhora Aparecida, é uma iniciativa muito nobre, nascida na cidade de Franca,
+                                   interior de SP, que apoia pessoas em situações de adoecimento, principalmente as que lutam incansavelmente contra o
+                                   câncer, uma doença grave que infelizmente não escolhe suas vítimas e afeta tantos ao nosso redor.
+                                </p>
                             </div>
                         </div>
                         <card shadow class="shadow-lg--hover mt-5">

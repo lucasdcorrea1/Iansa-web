@@ -29,6 +29,11 @@ export default {
     font-family: 'Indie Flower', cursive;
   }
   .fab {
+    &:hover {
+      color: rgba(255, 255, 255, 0.7);
+      // background: #ab4a9e;
+      opacity: .5;
+    }
     position: fixed;
     display: flex;
     right: 16px;

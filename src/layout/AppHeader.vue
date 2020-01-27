@@ -58,10 +58,34 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a target="_blank" rel="noopener" href="https://www.facebook.com/casadeapoioiansa/"
+                       class="nav-link nav-link-icon" data-toggle="tooltip"
+                       data-original-title="Like us">
+                        <i class="fa fa-facebook-square"></i>
+                        <span class="nav-link-inner--text d-lg-none">Facebook</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/iansa-casa-de-apoio-588747140/?ppe=1"
+                       class="nav-link nav-link-icon" data-toggle="tooltip"
+                       data-original-title="Like us">
+                        <i class="fa fa-linkedin"></i>
+                        <span class="nav-link-inner--text d-lg-none">Linkedin</span>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link nav-link-icon" href="https://www.instagram.com/casadeapoioiansa/"
-                       target="_blank" rel="noopener" data-toggle="tooltip" title="Follow us on Instagram">
+                       target="_blank" rel="noopener" data-toggle="tooltip">
                         <i class="fa fa-instagram"></i>
                         <span class="nav-link-inner--text d-lg-none">Instagram</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a target="_blank" rel="noopener" href="https://www.youtube.com/channel/UCm1doV9akgJHh517-FnxULA/featured"
+                      class="nav-link nav-link-icon" data-toggle="tooltip"
+                       data-original-title="Star on Github">
+                        <i class="fa fa-youtube"></i>
+                        <span class="nav-link-inner--text d-lg-none">Youtube</span>
                     </a>
                 </li>
             </ul>
