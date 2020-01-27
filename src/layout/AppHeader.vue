@@ -29,6 +29,13 @@
                                 <h6 class="heading text-primary mb-md-1">História</h6>
                             </div>
                         </a>
+                        <router-link
+                            to="/about" 
+                           class="media d-flex align-items-center">
+                            <div class="media-body ml-2">
+                                <h6 class="heading text-primary mb-md-1">Sobre</h6>
+                            </div>
+                        </router-link>
                         <a href="https://demos.creative-tim.com/vue-argon-design-system/documentation/"
                            class="media d-flex align-items-center">
                             <div class="media-body ml-2">

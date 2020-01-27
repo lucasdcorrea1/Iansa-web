@@ -9,6 +9,7 @@ import Register from "./views/Register.vue";
 import RegisterEvents from "./views/RegisterEvents.vue";
 import Profile from "./views/Profile.vue";
 import ForgotPassword from "./views/ForgotPassword.vue"; 
+import About from "./views/About.vue"; 
 
 Vue.use(Router);
 
@@ -30,6 +31,15 @@ export default new Router({
       components: {
         header: AppHeader,
         default: Landing,
+        footer: AppFooter
+      }
+    },
+    {
+      path: "/about",
+      name: "about",
+      components: {
+        header: AppHeader,
+        default: About,
         footer: AppFooter
       }
     },
