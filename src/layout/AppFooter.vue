@@ -25,23 +25,23 @@
             </div>
                 <div class="col-md-4 contact" style="margin:0">
                     <h4 class="text-primary font-weight-light">Unidade I</h4>
-                    <h5 class="mb-0 font-weight-light">
+                    <p class="mb-0 font-weight-light">
                         <span>Av.Luís Vaz de Camões - 2901</span>
-                    </h5>
-                    <h5 class="mb-0 font-weight-light locale">Jardim Eden - Franca-SP</h5>
-                    <h5 class="mb-0 font-weight-light phone">
+                    </p>
+                    <p class="mb-0 font-weight-light locale">Jardim Eden - Franca-SP</p>
+                    <p class="mb-0 font-weight-light phone">
                         <span class="phone">(16) 3409-261</span>
-                    </h5>
+                    </p>
                 </div>
                 <div class="col-md-4 contact">
                     <h4 class="text-primary font-weight-light">Unidade II</h4>
-                    <h5 class="mb-0 font-weight-light">
+                    <p class="mb-0 font-weight-light">
                         <span>R.João de Góes Conrado - 2570</span>
-                    </h5> 
-                    <h5 class="mb-0 font-weight-light locale">São josé, Franca-SP</h5>
-                    <h5 class="mb-0 font-weight-light phone">
+                    </p> 
+                    <p class="mb-0 font-weight-light locale">São josé, Franca-SP</p>
+                    <p class="mb-0 font-weight-light phone">
                         <span class="phone-text">(16) 3702-4042</span>
-                    </h5>
+                    </p>
                 </div>
                 <div class="col-md-4 text-lg-center btn-wrapper">
                     <a target="_blank" rel="noopener" href="https://www.facebook.com/casadeapoioiansa/"
@@ -98,8 +98,12 @@ export default {
 </script>
 <style lang="scss">
 .footer-iansa {
+    h3 {
+        font-weight: bold !important;
+        font-size: 18px;
+    }
     .text-primary {
-        color: #673AB7 !important
+        color: #673AB7 !important;
     }
     .phone{
         margin-top: 16px;
