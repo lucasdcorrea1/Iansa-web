@@ -17,51 +17,42 @@
                           header-classes="bg-white pb-5"
                           body-classes="px-lg-5 py-lg-5"
                           class="border-0">
-                        <template>
-                            <div class="text-muted text-center mb-3">
-                                <small>Cadastre o Usuário com</small>
-                            </div>
-                            <div class="btn-wrapper text-center">
-                                <base-button type="neutral">
-                                    <img slot="icon" src="img/icons/common/github.svg">
-                                    Github
-                                </base-button>
-
-                                <base-button type="neutral">
-                                    <img slot="icon" src="img/icons/common/google.svg">
-                                    Google
-                                </base-button>
-                            </div>
-                        </template>
+                                      <template>
+              <div class="text-muted text-center mb-3">
+                <img
+                  src="../../public/img/brand/logo.png"
+                  class="logo"
+                  alt="..."
+                />
+              </div>
+            </template>
                         <template>
                             <form role="form">
                                 <base-input alternative
                                             class="mb-3"
                                             placeholder="Name"
-                                            addon-left-icon="ni ni-hat-3">
+                                            addon-left-icon="ni ni-hat-3"
+                                            v-model="name">
                                 </base-input>
                                 <base-input alternative
                                             class="mb-3"
                                             placeholder="Email"
-                                            addon-left-icon="ni ni-email-83">
+                                            addon-left-icon="ni ni-email-83"
+                                            v-model="email">
                                 </base-input>
                                 <base-input alternative
                                             type="password"
                                             placeholder="Password"
-                                            addon-left-icon="ni ni-lock-circle-open">
+                                            addon-left-icon="ni ni-lock-circle-open"
+                                            v-model="password">
                                 </base-input>
-                                <div class="text-muted font-italic">
-                                    <small>password strength:
-                                        <span class="text-success font-weight-700">strong</span>
-                                    </small>
-                                </div>
-                                <base-checkbox>
-                                    <span>I agree with the
-                                        <a href="#">Privacy Policy</a>
-                                    </span>
-                                </base-checkbox>
                                 <div class="text-center">
-                                    <base-button type="primary" class="my-4">Create account</base-button>
+                                    <base-button 
+                                        type="primary" 
+                                        class="my-4" 
+                                        @click="submit(this)">
+                                        Create account
+                                    </base-button>
                                 </div>
                             </form>
                         </template>
@@ -72,7 +63,51 @@
     </section>
 </template>
 <script>
-export default {};
+import axios from 'axios';
+export default {
+  data: () => {
+    return {
+        name: '',
+        email: '',
+        password: ''
+   }
+  },
+//   beforeDestroy () {
+//     this.form.password = "";
+//     this.form.email = "";
+//     this.form.name = "";
+//   },
+  created () {
+  },
+  methods: {
+    async submit () {
+        const formSubmit = {
+          name: this.name,
+          email: this.email,
+          password: this.password
+        }
+        if(this.name.length && this.email.length && this.password.length){
+            const config = {
+                data: formSubmit,
+                method: "POST",
+                headers: {Authorization:`${JSON.parse(localStorage.getItem("user")).token}`} 
+            }
+            await axios('https://iansa-api.herokuapp.com/auth/register', config)
+            .then(res => {
+                if (res) {
+                    alert(res.data);
+                }
+            })
+            .catch(err => {
+                alert(err);
+            })
+            .finally(() => {
+                // this.loading = false;
+            });
+        }
+    },
+  }
+};
 </script>
 <style>
 </style>
