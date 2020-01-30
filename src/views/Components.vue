@@ -2,7 +2,9 @@
     <div>
       <carousel></carousel>
       <donate></donate>
-      <Team></Team>
+      <services></services>
+      <team></team>
+
         <!-- <hero></hero>
         <basic-elements></basic-elements>
         <inputs></inputs>
@@ -27,6 +29,7 @@ import Icons from "./components/Icons";
 import Examples from "./components/Examples";
 import DownloadSection from "./components/DownloadSection";
 import Donate from "./components/Donate";
+import Services from "./components/Services";
 import Team from "./components/Team";
 
 export default {
@@ -43,7 +46,8 @@ export default {
     Examples,
     DownloadSection,
     Donate,
-    Team
+    Services,
+    Team,
   }
 };
 </script>
