@@ -1,5 +1,5 @@
 <template>
-    <section class="section section-shaped team">
+    <section class="section section-shaped services">
             <div class="shape shape-style-1">
                 <span></span>
                 <span></span>
@@ -38,7 +38,7 @@
                                     <div class="d-flex px-3">
                                         <div>
                                             <icon
-                                            gradient="success"
+                                            gradient="warning"
                                             color="white"
                                             shadow
                                             rounded>
@@ -48,7 +48,7 @@
                                             </icon>
                                         </div>
                                         <div class="pl-4">
-                                            <h5 class="title text-success">Refeições</h5>
+                                            <h5 class="title text-warning">Refeições</h5>
                                             <p>Oferecemos refeições toda a qualidade, carinho e cuidados  que nossos beneficiários merecem e necessitam. </p>
                                         </div>
                                     </div>
@@ -59,7 +59,7 @@
                                     <div class="d-flex px-3">
                                         <div>
                                             <icon
-                                            gradient="warning"
+                                            gradient="success"
                                             color="white"
                                             shadow
                                             rounded>
@@ -67,7 +67,7 @@
                                             </icon>
                                         </div>
                                         <div class="pl-4">
-                                            <h5 class="title text-warning">Dormitórios</h5>
+                                            <h5 class="title text-success">Dormitórios</h5>
                                             <p>Acomodações para os beneficiários e familiares  trazendo conforto e descanso necessários.</p>
                                         </div>
                                     </div>
@@ -165,15 +165,19 @@
 export default {};
 </script>
 <style lang="scss">
-    section.team {
+    section.services {
         background-color: #ab4a9e;
         padding-top: 100px;
         margin: 0;
         .shape-style-1 {
             z-index: 0;
         }
+    }
+    
+    @media all and (min-width: 990px) {
         .card.font-title {
             height: 160px;
         }
     }
+
 </style>
