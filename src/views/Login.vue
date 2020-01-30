@@ -55,7 +55,7 @@
                   <base-button
                     type="primary"
                     class="my-4"
-                    @click="handleSubmit"
+                    @click="submit()"
                   >Entrar</base-button>
                 </div>
               </form>
@@ -87,12 +87,12 @@
 <script>
 import axios from 'axios';
 export default {
-  data () {
+  data: () => {
     return {
-      email: "",
-      password: "",
-      submitted: false
-    };
+        name: '',
+        email: '',
+        password: ''
+   };
   },
   beforeDestroy () {
     this.password = "";
@@ -103,19 +103,19 @@ export default {
     this.logout();
     window.addEventListener("keypress", e => {
       if (e.key == "Enter") {
-        this.handleSubmit();
+        this.submit();
       }
     });
   },
   methods: {
-    async handleSubmit () {
-      if (this.email !== "" && this.password !== "") {
-        const params = {
+    async submit () {
+      console.log("ta entrando ")
+      if (this.email.length && this.password.length) {
+        const data = {
           email: this.email,
           password: this.password
         }
-        await axios.post(`https://iansa-api.herokuapp.com/auth/authenticate`, params, {
-          timeout: 10000
+        await axios.post(`https://iansa-api.herokuapp.com/auth/authenticate`, data, {
         }).then(response => {
           if (response) {
             localStorage.setItem("user", JSON.stringify(response.data));

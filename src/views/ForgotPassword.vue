@@ -30,10 +30,16 @@
                                 <base-input alternative
                                             class="mb-3"
                                             placeholder="Email"
-                                            addon-left-icon="ni ni-email-83">
+                                            addon-left-icon="ni ni-email-83"
+                                            v-model="email">
                                 </base-input>
                                 <div class="text-center">
-                                    <base-button type="primary" class="my-4">ENVIAR</base-button>
+                                    <base-button 
+                                        type="primary" 
+                                        class="my-4"
+                                        @click="submit()">
+                                        ENVIAR
+                                    </base-button>
                                 </div>
                             </form>
                         </template>
@@ -57,7 +63,45 @@
     </section>
 </template>
 <script>
-export default {};
+import axios from 'axios';
+export default {
+  data: () => {
+    return {
+        email: '',
+   };
+  },
+  beforeDestroy () {
+    this.email = "";
+  },
+  created () {
+    // reset login status
+    this.logout();
+    window.addEventListener("keypress", e => {
+      if (e.key == "Enter") {
+        this.submit();
+      }
+    });
+  },
+  methods: {
+    async submit () {
+      if (this.email.length) {
+        axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
+        const data = {
+          email: this.email
+        }
+        console.log(data)
+        await axios.post(`https://iansa-api.herokuapp.com/auth/forgotpassword`, data, {
+        }).then(response => {
+            if (res) {
+                    alert(res.data);
+                }
+        }).catch(error => {
+          alert("Erro ao tentar recuperar senha: " + error);
+        })
+      }
+    },
+  }
+};
 </script>
 <style lang="scss">
     img.logo {

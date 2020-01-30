@@ -50,7 +50,7 @@
                                     <base-button 
                                         type="primary" 
                                         class="my-4" 
-                                        @click="submit(this)">
+                                        @click="submit()">
                                         Create account
                                     </base-button>
                                 </div>
