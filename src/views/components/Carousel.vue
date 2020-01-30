@@ -2,11 +2,16 @@
   <div class="col-lg-12" style="padding: 0">
     <div class="overflow-hidden">
       <b-carousel class="carousel" id="carousel1" controls indicators>
-        <b-carousel-slide class="font-title"
-          v-for="(slide, index) in slides" :key="index"
-          :img-src="slide.url">
-          {{slide.title}}
-        </b-carousel-slide>
+        <div v-if="slides.length">
+          <b-carousel-slide class="font-title"
+            v-for="(slide, index) in slides" :key="index"
+            :img-src="slide.url">
+            {{slide.title}}
+          </b-carousel-slide>
+        </div>
+        <div v-else class="empty font-title">
+          {{messageEmpty}}
+        </div>
       </b-carousel>
     </div>
   </div>
@@ -24,7 +29,8 @@ export default {
   data() {
     return {
       slides: [],
-      loading: false
+      loading: false,
+      messageEmpty: 'Carregando slides...',
     };
   },
   created() {
@@ -48,6 +54,8 @@ export default {
         })
         .finally(() => {
           this.loading = false;
+          console.log("this.slides.length = ", this.slides.length);
+          this.slides.length == 0 ? this.messageEmpty = 'Não encontramos slides :(' : '';
         });
     }
   }
@@ -84,6 +92,17 @@ div#carousel1___BV_inner_::before {
 
 .carousel {
   user-select: none;
+  .empty {
+    height: 500px;
+    width: 100%;
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+  }
   a {
     &.carousel-control-next,
     &.carousel-control-prev {

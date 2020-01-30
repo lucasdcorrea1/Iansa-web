@@ -1,179 +1,363 @@
 <template>
-    <section class="section section-shaped team">
-            <div class="shape shape-style-1">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
+  <section class="section team font-title">
+    <div class="container">
+      <div class="at-section">
+        <div class="at-section__title">Nossa Equipe</div>
+      </div>
+      <!-- <div class="at-grid" data-column="3">
+        <div class="at-column">
+          <div class="at-user">
+            <div class="at-user__avatar">
+              <img src="https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg" />
             </div>
-            <div class="container py-0">
-                <div class="row row-grid align-items-center">
-                    <div class="col-lg-12 order-lg-1">
-                        <div class="d-flex px-3 mt-5">
-                            <div>
-                                <icon
-                                    size="lg"
-                                    gradient="danger"
-                                    color="white"
-                                    shadow
-                                    rounded>
-                                    <i class="fa fa-heart"></i>
-                                </icon>
-                            </div>
-                            <div class="pl-4">
-                                <h4 class="display-3 text-white">I.A.N.S.A</h4>
-                                <p class="text-white">
-                                   O I.A.N.S.A acolhe as pessoas da melhor forma possível, transformando um momento delicado em esperança e carinho.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="row row-grid">
-                            <div class="col-lg-6">
-                                <card shadow class="shadow-lg--hover mt-2 font-title">
-                                    <div class="d-flex px-3">
-                                        <div>
-                                            <icon
-                                            gradient="success"
-                                            color="white"
-                                            shadow
-                                            rounded>
-                                                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
-                                                    <path fill="currentColor" d="M2,16H22V18C22,19.11 21.11,20 20,20H4C2.89,20 2,19.11 2,18V16M6,4H18C20.22,4 22,5.78 22,8V10H2V8C2,5.78 3.78,4 6,4M4,11H15L17,13L19,11H20C21.11,11 22,11.89 22,13C22,14.11 21.11,15 20,15H4C2.89,15 2,14.11 2,13C2,11.89 2.89,11 4,11Z" />
-                                                </svg>
-                                            </icon>
-                                        </div>
-                                        <div class="pl-4">
-                                            <h5 class="title text-success">Refeições</h5>
-                                            <p>Oferecemos refeições toda a qualidade, carinho e cuidados  que nossos beneficiários merecem e necessitam. </p>
-                                        </div>
-                                    </div>
-                                </card>
-                            </div>
-                            <div class="col-lg-6">
-                                <card shadow class="shadow-lg--hover mt-2 font-title">
-                                    <div class="d-flex px-3">
-                                        <div>
-                                            <icon
-                                            gradient="warning"
-                                            color="white"
-                                            shadow
-                                            rounded>
-                                                <i class="fa fa-bed"></i>
-                                            </icon>
-                                        </div>
-                                        <div class="pl-4">
-                                            <h5 class="title text-warning">Dormitórios</h5>
-                                            <p>Acomodações para os beneficiários e familiares  trazendo conforto e descanso necessários.</p>
-                                        </div>
-                                    </div>
-                                </card>
-                            </div>
-                        </div>
-                        <div class="row row-grid">
-                            <div class="col-lg-6">
-                                <card shadow class="shadow-lg--hover mt-2 font-title">
-                                    <div class="d-flex px-3">
-                                        <div>
-                                            <icon
-                                            gradient="primary"
-                                            color="white"
-                                            shadow
-                                            rounded>
-                                               <i class="fa fa-subway"></i>
-                                            </icon>
-                                        </div>
-                                        <div class="pl-4">
-                                            <h5 class="title text-primary">Translado</h5>
-                                            <p>Disponibilizamos aos familiares e benefeciários translado entre o Hospital do Câncer e o IANSA no horário do almoço.</p>
-                                        </div>
-                                    </div>
-                                </card>
-                            </div>
-                            <div class="col-lg-6">
-                                <card shadow class="shadow-lg--hover mt-2 font-title">
-                                    <div class="d-flex px-3">
-                                        <div>
-                                            <icon
-                                            gradient="info"
-                                            color="white"
-                                            shadow
-                                            rounded>
-                                                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
-                                                    <path fill="currentColor" d="M20.57,14.86L22,13.43L20.57,12L17,15.57L8.43,7L12,3.43L10.57,2L9.14,3.43L7.71,2L5.57,4.14L4.14,2.71L2.71,4.14L4.14,5.57L2,7.71L3.43,9.14L2,10.57L3.43,12L7,8.43L15.57,17L12,20.57L13.43,22L14.86,20.57L16.29,22L18.43,19.86L19.86,21.29L21.29,19.86L19.86,18.43L22,16.29L20.57,14.86Z" />
-                                                </svg>
-                                            </icon>
-                                        </div>
-                                        <div class="pl-4">
-                                            <h5 class="title text-info">Atividades</h5>
-                                            <p>Realização de oficinas e atividades para entretenimento e aprendizado.</p>
-                                        </div>
-                                    </div>
-                                </card>
-                            </div>
-                        </div>
-                        <div class="row row-grid">
-                            <div class="col-lg-6">
-                                <card shadow class="shadow-lg--hover mt-2 font-title">
-                                    <div class="d-flex px-3">
-                                        <div>
-                                            <icon
-                                            gradient="warning"
-                                            color="white"
-                                            shadow
-                                            rounded>
-                                                <i class="fa fa-book"></i>
-                                            </icon>
-                                        </div>
-                                        <div class="pl-4">
-                                            <h5 class="title text-warning">Biblioteca</h5>
-                                            <p>Espaço destinado à leitura com diversos livros e revistas para o aprendizado e entretenimento.</p>
-                                        </div>
-                                    </div>
-                                </card>
-                            </div>
-                            <div class="col-lg-6">
-                                <card shadow class="shadow-lg--hover mt-2 font-title">
-                                    <div class="d-flex px-3">
-                                        <div>
-                                            <icon
-                                            gradient="success"
-                                            color="white"
-                                            shadow
-                                            rounded>
-                                                <i class="fa fa-calendar"></i>
-                                            </icon>
-                                        </div>
-                                        <div class="pl-4">
-                                            <h5 class="title text-success">Bazar e Eventos</h5>
-                                            <p>Possuímos um brexó e também realizamos  eventos em prol do IANSA para arrecadação de fundos e doações.</p>
-                                        </div>
-                                    </div>
-                                </card>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="at-user__name">Aaron Rossi</div>
+            <div class="at-user__title">CEO &amp; Co-Founder</div>
+            <ul class="at-social">
+              <li class="at-social__item">
+                <a href>
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="18"
+                    height="18"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14 9h3l-.375 3H14v9h-3.89v-9H8V9h2.11V6.984c0-1.312.327-2.304.984-2.976C11.75 3.336 12.844 3 14.375 3H17v3h-1.594c-.594 0-.976.094-1.148.281-.172.188-.258.5-.258.938V9z"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li class="at-social__item">
+                <a href>
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="18"
+                    height="18"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20.875 7.5v.563c0 3.28-1.18 6.257-3.54 8.93C14.978 19.663 11.845 21 7.938 21c-2.5 0-4.812-.687-6.937-2.063.5.063.86.094 1.078.094 2.094 0 3.969-.656 5.625-1.968a4.563 4.563 0 0 1-2.625-.915 4.294 4.294 0 0 1-1.594-2.226c.375.062.657.094.844.094.313 0 .719-.063 1.219-.188-1.031-.219-1.899-.742-2.602-1.57a4.32 4.32 0 0 1-1.054-2.883c.687.328 1.375.516 2.062.516C2.61 9.016 1.938 7.75 1.938 6.094c0-.782.203-1.531.609-2.25 2.406 2.969 5.515 4.547 9.328 4.734-.063-.219-.094-.562-.094-1.031 0-1.281.438-2.36 1.313-3.234C13.969 3.437 15.047 3 16.328 3s2.375.484 3.281 1.453c.938-.156 1.907-.531 2.907-1.125-.313 1.094-.985 1.938-2.016 2.531.969-.093 1.844-.328 2.625-.703-.563.875-1.312 1.656-2.25 2.344z"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li class="at-social__item">
+                <a href>
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="18"
+                    height="18"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M19.547 3c.406 0 .75.133 1.031.398.281.266.422.602.422 1.008v15.047c0 .406-.14.766-.422 1.078a1.335 1.335 0 0 1-1.031.469h-15c-.406 0-.766-.156-1.078-.469C3.156 20.22 3 19.86 3 19.453V4.406c0-.406.148-.742.445-1.008C3.742 3.133 4.11 3 4.547 3h15zM8.578 18V9.984H6V18h2.578zM7.36 8.766c.407 0 .743-.133 1.008-.399a1.31 1.31 0 0 0 .399-.96c0-.407-.125-.743-.375-1.009C8.14 6.133 7.813 6 7.406 6c-.406 0-.742.133-1.008.398C6.133 6.664 6 7 6 7.406c0 .375.125.696.375.961.25.266.578.399.984.399zM18 18v-4.688c0-1.156-.273-2.03-.82-2.624-.547-.594-1.258-.891-2.133-.891-.938 0-1.719.437-2.344 1.312V9.984h-2.578V18h2.578v-4.547c0-.312.031-.531.094-.656.25-.625.687-.938 1.312-.938.875 0 1.313.578 1.313 1.735V18H18z"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div> -->
+      <div class="at-grid" data-column="3">
+        <div class="at-column" v-for="(item, index) in team" :key="index">
+        <!-- <div 
+          style="width: 100%;
+          position: absolute;
+          z-index: 2;
+          height: 100%;
+          background: red;
+          left: 0;
+          top: 0;
+          overflow: hidden;">
+          <img :src="item.image" style="height: 100%"/>
+        </div> -->
+          <div class="at-user">
+            <div :class="[{top: item.top},'at-user__avatar']">
+              <img :src="item.image" @mouseover="teste(item.image)"/>
             </div>
-        </section>
+            <div class="at-user__name">{{item.name}}</div>
+            <div class="at-user__title">{{item.office}}</div>
+            <ul class="at-social">
+              <li class="at-social__item">
+                <a href>
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="18"
+                    height="18"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14 9h3l-.375 3H14v9h-3.89v-9H8V9h2.11V6.984c0-1.312.327-2.304.984-2.976C11.75 3.336 12.844 3 14.375 3H17v3h-1.594c-.594 0-.976.094-1.148.281-.172.188-.258.5-.258.938V9z"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li class="at-social__item">
+                <a href>
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="18"
+                    height="18"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20.875 7.5v.563c0 3.28-1.18 6.257-3.54 8.93C14.978 19.663 11.845 21 7.938 21c-2.5 0-4.812-.687-6.937-2.063.5.063.86.094 1.078.094 2.094 0 3.969-.656 5.625-1.968a4.563 4.563 0 0 1-2.625-.915 4.294 4.294 0 0 1-1.594-2.226c.375.062.657.094.844.094.313 0 .719-.063 1.219-.188-1.031-.219-1.899-.742-2.602-1.57a4.32 4.32 0 0 1-1.054-2.883c.687.328 1.375.516 2.062.516C2.61 9.016 1.938 7.75 1.938 6.094c0-.782.203-1.531.609-2.25 2.406 2.969 5.515 4.547 9.328 4.734-.063-.219-.094-.562-.094-1.031 0-1.281.438-2.36 1.313-3.234C13.969 3.437 15.047 3 16.328 3s2.375.484 3.281 1.453c.938-.156 1.907-.531 2.907-1.125-.313 1.094-.985 1.938-2.016 2.531.969-.093 1.844-.328 2.625-.703-.563.875-1.312 1.656-2.25 2.344z"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li class="at-social__item">
+                <a href>
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="18"
+                    height="18"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M19.547 3c.406 0 .75.133 1.031.398.281.266.422.602.422 1.008v15.047c0 .406-.14.766-.422 1.078a1.335 1.335 0 0 1-1.031.469h-15c-.406 0-.766-.156-1.078-.469C3.156 20.22 3 19.86 3 19.453V4.406c0-.406.148-.742.445-1.008C3.742 3.133 4.11 3 4.547 3h15zM8.578 18V9.984H6V18h2.578zM7.36 8.766c.407 0 .743-.133 1.008-.399a1.31 1.31 0 0 0 .399-.96c0-.407-.125-.743-.375-1.009C8.14 6.133 7.813 6 7.406 6c-.406 0-.742.133-1.008.398C6.133 6.664 6 7 6 7.406c0 .375.125.696.375.961.25.266.578.399.984.399zM18 18v-4.688c0-1.156-.273-2.03-.82-2.624-.547-.594-1.258-.891-2.133-.891-.938 0-1.719.437-2.344 1.312V9.984h-2.578V18h2.578v-4.547c0-.312.031-.531.094-.656.25-.625.687-.938 1.312-.938.875 0 1.313.578 1.313 1.735V18H18z"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      team: [
+        {
+          image: 'https://www.iansa.org.br/static/media/eliane.40db9e67.jpg',
+          name: 'ELIANE BONINE',
+          office: 'Fundadora'
+        },
+        {
+          image: 'https://www.iansa.org.br/static/media/daniel.dd20aff7.jpg',
+          name: 'DANIEL MELO',
+          office: 'Fundador'
+        },
+        {
+          image: 'https://www.iansa.org.br/static/media/claudia.ec96f2a1.jpg',
+          name: 'CLÁUDIA BONINE',
+          office: 'Presidente'
+        },
+        {
+          image: 'https://www.iansa.org.br/static/media/cida.40b090ff.jpg',
+          name: 'CIDA HAJEL',
+          office: 'Captadora de Recursos'
+        },
+        {
+          image: 'https://www.iansa.org.br/static/media/adriana.000e1a80.jpg',
+          name: 'ADRIANA CRISTINA ALVES BATISTA',
+          office: 'Assistente Social'
+        },
+        {
+          image: 'https://www.iansa.org.br/static/media/jennifer.ac494723.jpg',
+          name: 'JENIFFER BLOIS',
+          office: 'Psicóloga'
+        },
+        {
+          image: 'https://www.iansa.org.br/static/media/elaine.cca27989.jpg',
+          name: 'ELAINE ANDRADE',
+          office: 'Serviços Gerais'
+        },
+        {
+          image: 'https://www.iansa.org.br/static/media/luciana.66146854.jpg',
+          name: 'LUCIANA NUNES',
+          office: 'Cozinheira'
+        },
+        {
+          image: 'https://www.iansa.org.br/static/media/angelita.8b6f6027.jpg',
+          name: 'ANGELITA NEVES',
+          office: 'Serviços Gerais',
+          top: true
+        },
+        {
+          image: 'https://www.iansa.org.br/static/media/simone.fa5f65a0.jpg',
+          name: 'SIMONE BONINE',
+          office: 'Serviços Gerais',
+          top: true
+        },
+        {
+          image: 'https://www.iansa.org.br/static/media/ana.fe1690ff.jpg',
+          name: 'ANA',
+          office: 'Auxiliar Administrativa'
+        }
+      ]
+    }
+  },
+  methods: {
+    teste(image) {
+      console.log("image = ", image);
+    }
+  }
+};
 </script>
 <style lang="scss">
-    section.team {
-        background-color: #ab4a9e;
-        padding-top: 100px;
-        margin: 0;
-        .shape-style-1 {
-            z-index: 0;
-        }
-        .card.font-title {
-            height: 160px;
-        }
+.team {
+  $prefix: at;
+  $totalColumns: 9;
+
+  // Custom Prefix
+  .#{$prefix} {
+    // Section
+    &-section {
+      &__title {
+        margin: 0 0 70px;
+        color: #ab4a9e;
+        font-size: 2.5rem;
+        font-weight: 300;
+        line-height: 2.625rem;
+        text-align: center;
+      }
     }
+
+    &-grid {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      background: #fff;
+      border: 1px solid #e2e9ed;
+
+      @for $i from 1 through $totalColumns {
+        &[data-column="#{$i}"] {
+          .#{$prefix}-column {
+            width: percentage(1 / $i);
+            max-width: percentage(1 / $i);
+            min-width: percentage(1 / $i);
+            flex-basis: percentage(1 / $i);
+          }
+        }
+      }
+    }
+
+    &-column {
+      z-index: 0;
+      position: relative;
+      background: #fff;
+      box-shadow: 0 0 0 1px #e2e9ed;
+      padding: 10px;
+      box-sizing: border-box;
+      transition: box-shadow 0.2s ease, transform 0.2s ease,
+        z-index 0s 0.2s ease;
+
+      &:before {
+        content: "";
+        display: block;
+        padding-top: 100%;
+      }
+
+      &:hover {
+        z-index: 1;
+        box-shadow: 0 8px 50px rgba(#000, 0.2);
+        transform: scale(1.05);
+        transition: box-shadow 0.2s ease, transform 0.2s ease,
+          z-index 0s 0s ease;
+
+        .#{$prefix}-social {
+          margin: 16px 0 0;
+          opacity: 1;
+        }
+      }
+
+      @media (max-width: 800px) {
+        width: 50% !important;
+        max-width: 50% !important;
+        min-width: 50% !important;
+        flex-basis: 50% !important;
+      }
+
+      @media (max-width: 600px) {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 100% !important;
+        flex-basis: 100% !important;
+      }
+    }
+
+    &-user {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      transform: translate(0, -50%);
+      text-align: center;
+
+      &__avatar {
+        width: 98px;
+        height: 98px;
+        border-radius: 100%;
+        margin: 0 auto 20px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &.top {
+          align-items: flex-start!important;
+        }
+
+        img {
+          display: block;
+          width: 100%;
+          max-width: 100%;
+        }
+      }
+
+      &__name {
+        color: #ab4a9e;
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 2.625rem;
+      }
+
+      &__title {
+        color: #ec95e1;
+        font-size: 1.2rem;
+        line-height: 2.375rem;
+      }
+    }
+
+    &-social {
+      margin: 0 0 -18px;
+      opacity: 0;
+      transition: margin 0.2s ease, opacity 0.2s ease;
+
+      &__item {
+        display: inline-block;
+        margin: 0 10px;
+
+        a {
+          display: block;
+        }
+
+        svg {
+          fill: #515f65;
+          display: block;
+          height: 18px;
+          transition: fill 0.2s ease;
+
+          &:hover {
+            fill: #788d96;
+          }
+        }
+      }
+    }
+  }
+  .at-social {
+      padding: 0;
+  }
+}
 </style>

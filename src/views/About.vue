@@ -50,8 +50,6 @@
                                 <span class="font-weight-light">, 27</span>
                             </h3>
                             <div class="h6 font-weight-300"><i class="ni location_pin mr-2"></i>sobre o IANSA</div>
-                            <div class="h6 mt-4"><i class="ni business_briefcase-24 mr-2"></i>Solution Manager - Creative Tim Officer</div>
-                            <div><i class="ni education_hat mr-2"></i>University of Computer Science</div>
                         </div>
                         <div class="mt-5 py-5 border-top text-center">
                             <div class="row justify-content-center">
@@ -64,7 +62,7 @@
                                 <p>Uma equipe técnica formada por assistentes sociais e psicólogos também oferece atendimento individual às pessoas que por ali passam, cuidando para que possam enfrentar e superar da melhor forma possível um momento tão delicado.</p>
                                 <p>Em 8 anos de existência, a Casa de Apoio IANSA já serviu mais de 15 mil refeições, ofereceu mais de duas centenas de hospedagens e atendeu um enorme número de pacientes que seguem o tratamento em suas casas, com empréstimo de camas hospitalares, suporte para soro, entre outros materiais hospitalares.</p>
                                 <p>Vale lembrar que todo este acolhimento e apoio prestado, seja com as refeições, o transporte, a hospedagem, o apoio técnico e outros meios de assistência são totalmente gratuitos e nenhum valor é cobrado das pessoas ali atendidas e assistidas. Tudo isso se deve àqueles que fazem doações ao Instituto e ao inestimável trabalho dos voluntários, que dedicam tempo e conhecimento a essa nobre causa.
-</p>
+                                </p>
                                     <a href="#">Show more</a>
                                 </div>
                             </div>
