@@ -1,5 +1,5 @@
 <template>
-  <section class="section section section-shaped my-0 overflow-hidden">
+  <section class="section section section-shaped my-0 overflow-hidden" style="background-color: #f5f5f5">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-12">
@@ -12,7 +12,7 @@
                 body-classes="py-5"
                 @click.native="handleAction(item.btnLink)"
                 :style="`background-image: ${item.bgImage}`">
-                <img :src="`img/brand/${item.img}`" />
+                <img :src="`img/brand/${item.img}`" class="donate-img"/>
                 <h6 class="text-uppercase">{{item.title}}</h6>
                 <div class="col-lg-12">
                   <h3 class="donate-value" rounded>{{item.value}}</h3>
@@ -79,7 +79,7 @@ export default {
 <style lang="scss">
 .card-body {
   cursor: pointer;
-  img {
+  .donate-img {
     max-width: 70px;
   }
   h6 {

@@ -1,20 +1,3 @@
-<!--
-
-=========================================================
-* Vue Argon Design System - v1.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/argon-design-system
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/argon-design-system/blob/master/LICENSE.md)
-
-* Coded by www.creative-tim.com
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
--->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -37,3 +20,26 @@
     <!-- built files will be auto injected -->
   </body>
 </html>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDgENNX0AqTADawxurerHvaQeN_s-tsMXI",
+    authDomain: "iansa-web.firebaseapp.com",
+    databaseURL: "https://iansa-web.firebaseio.com",
+    projectId: "iansa-web",
+    storageBucket: "iansa-web.appspot.com",
+    messagingSenderId: "340498848871",
+    appId: "1:340498848871:web:1911b711144ef4c2a188c2",
+    measurementId: "G-39FEQLKF95"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>

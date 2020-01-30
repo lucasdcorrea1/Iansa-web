@@ -66,7 +66,4 @@ export default {};
     div.container {
         top: -100px;
     }
-    .login-background {
-       background-color: #673AB7;
-    }
 </style>

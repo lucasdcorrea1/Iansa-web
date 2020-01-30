@@ -62,9 +62,9 @@ export default {
 };
 </script>
 <style lang="scss">
-#app {
-  background-color: #f5f5f5;
-}
+// #app {
+//   background-color: #f5f5f5;
+// }
 div#carousel1___BV_inner_::after {
   content: '';
   position: absolute;
