@@ -97,7 +97,7 @@ export default {
 		        }
             };
 
-        await axios(`http://localhost:3000/auth/forgotpassword`, config, {
+        await axios(`https://iansa-api.herokuapp.com/auth/forgotpassword`, config, {
         }).then(res => {
             if (res) {
                 this.$router.push({ path: "/resetpassword" });
