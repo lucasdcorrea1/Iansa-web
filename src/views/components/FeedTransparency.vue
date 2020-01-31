@@ -67,7 +67,7 @@ export default {
         })
         .finally(() => {
           this.loading = false;
-          console.log("this.slides.length = ", this.slides.length);
+        //   console.log("this.slides.length = ", this.slides.length);
           this.slides.length == 0 ? this.messageEmpty = 'Não encontramos slides :(' : '';
         });
     }
