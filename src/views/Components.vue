@@ -1,21 +1,9 @@
 <template>
     <div>
       <carousel></carousel>
-      <feedtransparency></feedtransparency>
       <donate></donate>
       <services></services>
       <team></team>
-
-        <!-- <hero></hero>
-        <basic-elements></basic-elements>
-        <inputs></inputs>
-        <custom-controls></custom-controls>
-        <navigation></navigation>
-        <javascript-components></javascript-components>
-        <icons></icons>
-        <examples></examples>
-        <download-section></download-section>
-        <carousel></carousel> -->
     </div>
 </template>
 <script>
@@ -32,7 +20,6 @@ import DownloadSection from "./components/DownloadSection";
 import Donate from "./components/Donate";
 import Services from "./components/Services";
 import Team from "./components/Team";
-import feedtransparency from "./components/FeedTransparency";
 
 export default {
   name: "components",
@@ -49,8 +36,7 @@ export default {
     DownloadSection,
     Donate,
     Services,
-    Team,
-    feedtransparency,
+    Team
   }
 };
 </script>

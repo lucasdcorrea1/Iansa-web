@@ -19,7 +19,7 @@
       <div class="row teste">
         <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
           <base-dropdown class="nav-item" menu-classes="dropdown-menu-md">
-            <a slot="title" href="#" class="nav-link" data-toggle="dropdown" role="button">
+            <a slot="title" href="#" class="nav-link" data-toggle="dropdown" role="button" @click="hideMenu">
               <!-- <i class="ni ni-ui-04 d-lg-none"></i> -->
               <span class="nav-link-inner--text">Quem somos</span>
             </a>
@@ -47,20 +47,25 @@
               </a>
             </div>
           </base-dropdown>
-          <li class="nav-item">
-            <a slot="title" href="#donate" v-smooth-scroll class="nav-link">
-              <span class="nav-link-inner--text">Quero doar</span>
+          <li class="nav-item" v-if="!hideMenu">
+            <a slot="title" href="#donate" v-smooth-scroll class="nav-link" @click="hideMenu">
+              <span class="nav-link-inner--text">Quero doar{{menuSelected}}</span>
             </a>
           </li>
-          <li class="nav-item">
-            <a slot="title" href="#services" v-smooth-scroll class="nav-link">
+          <li class="nav-item" v-if="!hideMenu">
+            <a slot="title" href="#services" v-smooth-scroll class="nav-link" @click="hideMenu">
                 <span class="nav-link-inner--text">O que oferecemos</span>
             </a>
           </li>
-          <li class="nav-item">
-            <a slot="title" href="#team" v-smooth-scroll class="nav-link">
+          <li class="nav-item" v-if="!hideMenu">
+            <a slot="title" href="#team" v-smooth-scroll class="nav-link" @click="hideMenu">
                 <span class="nav-link-inner--text">Nossa equipe</span>
             </a>
+          </li>
+          <li class="nav-item">
+            <router-link slot="title" class="nav-link" to="/transparency" @click="hideMenu">
+                <span class="nav-link-inner--text">Tranparência</span>
+            </router-link>
           </li>
           <base-dropdown tag="li" class="nav-item">
             <a
@@ -185,16 +190,21 @@ export default {
   },
   data() {
     return {
-      logged: false
+      logged: false,
+      // menuSelected: '' ,
     };
   },
   methods: {
+    hideMenu() {
+      return this.menuSelected = localStorage.menuSelected ? true : false;
+    },
     sign: function(event) {
       localStorage.removeItem("user");
       location.reload();
     }
   },
   created() {
+    this.hideMenu();
     try {
       this.logged = JSON.parse(localStorage.getItem("user")).token
         ? true

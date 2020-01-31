@@ -1,5 +1,5 @@
 <template>
-    <section class="login-background section section-shaped section-lg my-0">
+    <section class="login-background section section-shaped section-lg my-0" style="z-index:10">
         <div class="shape shape-style-1 bg-gradient-default">
             <span></span>
             <span></span>

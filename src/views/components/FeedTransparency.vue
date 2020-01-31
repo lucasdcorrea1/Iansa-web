@@ -1,5 +1,5 @@
 <template>
-    <section class="section feedtrasparency">
+    <section id="transparency" class="section section-shaped trasparency">
                 <div class="shape shape-style-1">
                 <span></span>
                 <span></span>
@@ -38,6 +38,7 @@
 import axios from 'axios';
 
 export default {
+  name:'tranparency',
   data() {
     return {
       slides: [],
@@ -53,7 +54,7 @@ export default {
       this.loading = true;
       const config = {
         methods: "GET",
-        url: "http://localhost:3000/transparency/getAll"
+        url: "https://iansa-api.herokuapp.com/transparency/getAll"
       };
       await axios(config)
         .then(res => {
@@ -74,14 +75,14 @@ export default {
 };
 </script>
 <style lang="scss">
-    // section.feedtrasparency {
-    //     background-color: #ab4a9e;
-    //     padding-top: 100px;
-    //     margin: 0;
-    //     .shape-style-1 {
-    //         z-index: 0;
-    //     }
-    // }
+    section.trasparency {
+        background-color: #ab4a9e;
+        padding-top: 100px;
+        margin: 0;
+        .shape-style-1 {
+            z-index: 1;
+        }
+    }
 div#post-list {
     width: 100%;
     max-width: 780px;

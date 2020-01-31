@@ -11,6 +11,7 @@ import Profile from "./views/Profile.vue";
 import ForgotPassword from "./views/ForgotPassword.vue";  
 import ResetPassword from "./views/ResetPassword.vue";  
 import About from "./views/About.vue"; 
+import Transparency from "./views/Transparency.vue"; 
 
 Vue.use(Router);
 
@@ -70,9 +71,9 @@ export default new Router({
       path: "/register",
       name: "register",
       components: {
-        header: AppHeader,
+        // header: AppHeader,
         default: Register,
-        footer: AppFooter
+        // footer: AppFooter
       }
     },
     {
@@ -90,6 +91,15 @@ export default new Router({
       components: {
         header: AppHeader,
         default: Profile,
+        footer: AppFooter
+      }
+    },
+    {
+      path: "/transparency",
+      name: "transparency",
+      components: {
+        header: AppHeader,
+        default: Transparency,
         footer: AppFooter
       }
     },

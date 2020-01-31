@@ -1,5 +1,5 @@
 <template>
-    <section class="login-background section section-shaped section-lg my-0">
+    <section class="login-background section section-shaped section-lg my-0" style="z-index:10">
         <div class="shape shape-style-1 bg-gradient-default">
             <span></span>
             <span></span>
@@ -30,19 +30,19 @@
                                 <base-input alternative
                                             class="mb-3"
                                             placeholder="Email"
-                                            addon-left-icon="ni ni-email-83"
+                                            addon-left-icon="fa fa-envelope"
                                             v-model="email">
                                 </base-input>
                                 <base-input alternative
                                             class="mb-3"
                                             placeholder="Token"
-                                            addon-left-icon="ni ni-email-83"
+                                            addon-left-icon="fa fa-key"
                                             v-model="token">
                                 </base-input>
                                 <base-input alternative
                                             class="mb-3"
                                             placeholder="Senha"
-                                            addon-left-icon="ni ni-email-83"
+                                            addon-left-icon="fa fa-unlock"
                                             v-model="password">
                                 </base-input>
                                 <div class="text-center">

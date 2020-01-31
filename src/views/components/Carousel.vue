@@ -35,6 +35,10 @@ export default {
   },
   created() {
     this.getSlides();
+    console.log("localstorage = ", localStorage);
+    if(localStorage.menuSelected) {
+      localStorage.removeItem('menuSelected');
+    }
   },
   methods: {
     async getSlides() {

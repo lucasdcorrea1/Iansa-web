@@ -76,7 +76,7 @@ export default {
     right: 16px;
     bottom: 16px;
     padding: 15px;
-    z-index: 1;
+    z-index: 9;
     border-radius: 100px;
     justify-content: center;
     align-items: center;
