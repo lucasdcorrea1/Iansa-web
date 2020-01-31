@@ -1,5 +1,5 @@
 <template>
-  <section class="section team font-title">
+  <section class="section team font-title" id="team">
     <div class="container">
       <div class="at-section">
         <div class="at-section__title">Nossa Equipe</div>

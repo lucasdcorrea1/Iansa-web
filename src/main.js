@@ -1,4 +1,5 @@
 import Vue from "vue";
+import VueSmoothScroll from 'vue-smooth-scroll';
 import App from "./App.vue";
 import router from "./router";
 import Argon from "./plugins/argon-kit";
@@ -6,6 +7,7 @@ import './registerServiceWorker'
 
 Vue.config.productionTip = false;
 Vue.use(Argon);
+Vue.use(VueSmoothScroll);
 
 
 router.beforeEach((to, from, next) => {

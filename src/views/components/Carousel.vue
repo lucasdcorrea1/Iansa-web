@@ -1,7 +1,7 @@
 <template>
   <div class="col-lg-12" style="padding: 0">
     <div class="overflow-hidden">
-      <b-carousel class="carousel" id="carousel1" controls indicators>
+      <b-carousel class="carousel" id="home" controls indicators>
         <div v-if="slides.length">
           <b-carousel-slide class="font-title"
             v-for="(slide, index) in slides" :key="index"
@@ -65,7 +65,7 @@ export default {
 // #app {
 //   background-color: #f5f5f5;
 // }
-div#carousel1___BV_inner_::after {
+div#home___BV_inner_::after {
   content: '';
   position: absolute;
   left: 0;
@@ -77,7 +77,7 @@ div#carousel1___BV_inner_::after {
   background-size: contain;
   background-repeat: no-repeat;
 }
-div#carousel1___BV_inner_::before {
+div#home___BV_inner_::before {
   content: '';
   position: absolute;
   left: 0;

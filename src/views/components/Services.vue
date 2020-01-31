@@ -1,5 +1,5 @@
 <template>
-    <section class="section section-shaped services">
+    <section class="section section-shaped services" id="services">
             <div class="shape shape-style-1">
                 <span></span>
                 <span></span>
@@ -25,7 +25,7 @@
                                     <i class="fa fa-heart"></i>
                                 </icon>
                             </div>
-                            <div class="pl-4">
+                            <div class="pl-4 font-title">
                                 <h4 class="display-3 text-white">I.A.N.S.A</h4>
                                 <p class="text-white">
                                    O I.A.N.S.A acolhe as pessoas da melhor forma possível, transformando um momento delicado em esperança e carinho.

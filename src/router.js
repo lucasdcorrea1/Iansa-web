@@ -23,7 +23,8 @@ export default new Router({
         header: AppHeader,
         default: Components,
         footer: AppFooter
-      }
+      },
+      alias: ['/team', '/donate', '/services', '/home']
     },
     {
       path: "/landing",
@@ -83,7 +84,7 @@ export default new Router({
         default: Profile,
         footer: AppFooter
       }
-    }
+    },
   ],
   scrollBehavior: to => {
     if (to.hash) {
