@@ -1,8 +1,9 @@
-https://isntagram-web-lucas.firebaseapp.com/feed
+https://iansa-web.firebaseapp.com/#/
+
 ## Technologies
 
   - Node.js;
-  - Reactjs ([Frontend](https://github.com/lucasdcorrea1/Instagram-web));
+  - Reactjs ([Frontend](https://github.com/lucasdcorrea1/iansa-web));
   - [Check package.json](/src/package.json).
 
 ## Installation
@@ -14,7 +15,7 @@ npm install
 ## Test
 
 ```sh
-yarn dev
+npm dev
 ```
 
 ## Release History
@@ -25,11 +26,12 @@ yarn dev
 ## Authors
 
 [Lucas Damas](https://github.com/lucasdcorrea1) – lucas.dcorrea1@gmail.com
+[Wesley Pedro](https://github.com/https://github.com/wesley-rocha) – wesleypedro.r@gmail.com
 
 
 ## Contributing
 
-Please read [CONTRIBUTING](https://github.com/lucasdcorrea1/Instagram-web/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING](https://github.com/lucasdcorrea1/iansa-web) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## License
 

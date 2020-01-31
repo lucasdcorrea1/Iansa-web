@@ -8,7 +8,8 @@ import Login from "./views/Login.vue";
 import Register from "./views/Register.vue";
 import RegisterEvents from "./views/RegisterEvents.vue";
 import Profile from "./views/Profile.vue";
-import ForgotPassword from "./views/ForgotPassword.vue"; 
+import ForgotPassword from "./views/ForgotPassword.vue";  
+import ResetPassword from "./views/ResetPassword.vue";  
 import About from "./views/About.vue"; 
 
 Vue.use(Router);
@@ -55,6 +56,13 @@ export default new Router({
       name: "ForgotPassword",
       components: {
         default: ForgotPassword
+      }
+    },
+    {
+      path: "/resetpassword",
+      name: "ResetPassword",
+      components: {
+        default: ResetPassword
       }
     },
     {

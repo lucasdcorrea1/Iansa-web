@@ -33,6 +33,18 @@
                                             addon-left-icon="ni ni-email-83"
                                             v-model="email">
                                 </base-input>
+                                <base-input alternative
+                                            class="mb-3"
+                                            placeholder="Token"
+                                            addon-left-icon="ni ni-email-83"
+                                            v-model="token">
+                                </base-input>
+                                <base-input alternative
+                                            class="mb-3"
+                                            placeholder="Senha"
+                                            addon-left-icon="ni ni-email-83"
+                                            v-model="password">
+                                </base-input>
                                 <div class="text-center">
                                     <base-button 
                                         :disabled="submitButton"
@@ -69,11 +81,15 @@ export default {
   data: () => {
     return {
         email: '',
+        token: '',
+        password: '',
         submitButton: false
    };
   },
   beforeDestroy () {
     this.email = "";
+    this.token = "";
+    this.password = "";
   },
   created () {
     // reset login status
@@ -86,26 +102,29 @@ export default {
   methods: {
     async submit () {
       if (this.email.length) {
-          this.submitButton = true;
+          const parameters = {
+              email: this.email,
+              token: this.token,
+              password: this.password
+          }
         const config = {
-                data: {email: this.email},
-                method: "POST",
+                data: parameters,
+                method: "PUT",
+                mode: 'no-cors',
                 headers: {
-			        "Access-Control-Allow-Origin": "*",
-                    "Access-Control-Allow-Methods": "GET, POST, PATCH, PUT, DELETE, OPTIONS",
-                    "Access-Control-Allow-Headers": "Origin, Content-Type, X-Auth-Token"
+			        'Access-Control-Allow-Origin': '*',
+			        Accept: 'application/json',
+			        'Content-Type': 'application/json',
 		        }
             };
 
-        await axios(`http://localhost:3000/auth/forgotpassword`, config, {
+        await axios(`https://iansa-api.herokuapp.com/auth/resetpassword`, config, {
         }).then(res => {
             if (res) {
-                this.$router.push({ path: "/resetpassword" });
-            }
+                this.$router.push({ path: "/login" });
+            };
         }).catch(err => {
          console.log(err.error)
-        }).finally(() => {
-            this.submitButton = false;
         });
       }
     },

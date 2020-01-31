@@ -1,6 +1,7 @@
 <template>
     <div>
       <carousel></carousel>
+      <feedtransparency></feedtransparency>
       <donate></donate>
       <services></services>
       <team></team>
@@ -31,6 +32,7 @@ import DownloadSection from "./components/DownloadSection";
 import Donate from "./components/Donate";
 import Services from "./components/Services";
 import Team from "./components/Team";
+import feedtransparency from "./components/FeedTransparency";
 
 export default {
   name: "components",
@@ -48,6 +50,7 @@ export default {
     Donate,
     Services,
     Team,
+    feedtransparency,
   }
 };
 </script>

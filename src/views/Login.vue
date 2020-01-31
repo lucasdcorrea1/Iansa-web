@@ -109,7 +109,6 @@ export default {
   },
   methods: {
     async submit () {
-      console.log("ta entrando ")
       if (this.email.length && this.password.length) {
         const data = {
           email: this.email,

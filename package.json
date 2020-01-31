@@ -8,6 +8,7 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
+  "proxy" : "https://iansa-api.herokuapp.com",
   "dependencies": {
     "axios": "^0.19.1",
     "bootstrap-vue": "^2.0.4",
