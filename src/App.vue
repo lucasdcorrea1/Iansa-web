@@ -7,6 +7,9 @@
         </fade-transition>
       </main>
       <div>
+        <a href="#home" v-smooth-scroll class="fab first" v-if="showButtonTop">
+           <i class="fa fa-arrow-up"></i>
+        </a>
         <a href="https://pag.ae/bhg8d0n" target="blank" class="fab">
           <img src="img/brand/icons/hand.svg">
           Quero doar
@@ -21,6 +24,27 @@ import { FadeTransition } from "vue2-transitions";
 export default {
   components: {
     FadeTransition
+  },
+  data() {
+    return {
+      showButtonTop: false,
+    }
+  },
+  methods: {
+    handleScroll: function () {
+      if((window.scrollY > 50)) {
+        this.showButtonTop = true;
+      }
+      else {
+        this.showButtonTop = false;
+      }
+    }
+  },
+  created: function () {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  destroyed: function () {
+    window.removeEventListener('scroll', this.handleScroll);
   }
 };
 </script>
@@ -33,6 +57,16 @@ export default {
     font-family: 'Indie Flower', cursive;
   }
   .fab {
+    &.first {
+      bottom: 90px;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      background: #f88e9e;
+      border-radius: 50px;
+      width: 45px;
+      height: 45px;
+    }
     &:hover {
       color: #ffffff;
       box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
@@ -56,6 +90,14 @@ export default {
     img {
       width: 34px;
       margin-right: 10px;
+    }
+  }
+
+  @media all and (min-width: 990px) {
+    .fab {
+      &.first {
+        bottom: 16px;
+      }
     }
   }
 </style>

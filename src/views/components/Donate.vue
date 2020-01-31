@@ -1,6 +1,16 @@
 <template>
-  <section class="section section section-shaped my-0 overflow-hidden" style="background-color: #f5f5f5">
+  <section class="section section section-shaped my-0 overflow-hidden" style="background-color: #f5f5f5" id="donate">
     <div class="container">
+      <div class="col-lg-12 order-lg-1">
+          <div class="d-flex px-3 mt-5">
+              <div class="pl-4 mb-5 font-title">
+                  <h4 class="display-3">Ei, que tal, fazer uma doação!?</h4>
+                  <p style="color: #ab4a9e;">
+                    Assine um de nossos planos de doação mensal  e seja um dos mantenedores da Casa de Apoio, assim você estará colaborando com centenas de pessoas que buscam em nossa instituição o amparo e o apoio tão essenciais no momento mais delicado de suas vidas.
+                  </p>
+              </div>
+          </div>
+      </div>
       <div class="row justify-content-center">
         <div class="col-lg-12">
           <div class="row row-grid text-center">
