@@ -64,17 +64,6 @@
       </div> -->
       <div class="at-grid" data-column="3">
         <div class="at-column" v-for="(item, index) in team" :key="index">
-        <!-- <div 
-          style="width: 100%;
-          position: absolute;
-          z-index: 2;
-          height: 100%;
-          background: red;
-          left: 0;
-          top: 0;
-          overflow: hidden;">
-          <img :src="item.image" style="height: 100%"/>
-        </div> -->
           <div class="at-user">
             <div :class="[{top: item.top},'at-user__avatar']">
               <img :src="item.image" @mouseover="teste(item.image)"/>
@@ -140,7 +129,8 @@ export default {
     return {
       team: [
         {
-          image: 'https://www.iansa.org.br/static/media/eliane.40db9e67.jpg',
+          image: '../public',
+          // image: 'https://www.iansa.org.br/static/media/eliane.40db9e67.jpg',
           name: 'ELIANE BONINE',
           office: 'Fundadora'
         },

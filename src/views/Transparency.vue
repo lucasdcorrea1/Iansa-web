@@ -8,12 +8,12 @@ export default {
         Tranparency
     },
     methods:{
-        test (){
-            localStorage.setItem("menuSelected", "transparency");
+        menuSelected (){
+            localStorage.setItem("menuSelected", true);
         }
     },
     created () {
-        this.test();
+        this.menuSelected();
     },
 };
 </script>

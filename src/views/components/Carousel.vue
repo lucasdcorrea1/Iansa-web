@@ -1,12 +1,12 @@
 <template>
   <div class="col-lg-12" style="padding: 0">
     <div class="overflow-hidden">
-      <b-carousel class="carousel" id="home" controls indicators>
+      <b-carousel :class="showFrame ? 'carousel show-frame' : 'carousel'" id="home" controls indicators>
         <div v-if="slides.length">
           <b-carousel-slide class="font-title"
             v-for="(slide, index) in slides" :key="index"
             :img-src="slide.url">
-            {{slide.title}}
+            {{slide.title}} - {{showFrame}}
           </b-carousel-slide>
         </div>
         <div v-else class="empty font-title">
@@ -22,6 +22,10 @@ import { BCarousel } from "bootstrap-vue/esm/components/carousel/carousel";
 import { BCarouselSlide } from "bootstrap-vue/esm/components/carousel/carousel-slide";
 
 export default {
+  props: {
+    showFrame: { type: Boolean, default: false },
+    changeStorage: { type: Boolean, default: false },
+  },
   components: {
     BCarousel,
     BCarouselSlide
@@ -35,8 +39,7 @@ export default {
   },
   created() {
     this.getSlides();
-    console.log("localstorage = ", localStorage);
-    if(localStorage.menuSelected) {
+    if(this.changeStorage && localStorage.menuSelected) {
       localStorage.removeItem('menuSelected');
     }
   },
@@ -58,7 +61,7 @@ export default {
         })
         .finally(() => {
           this.loading = false;
-          console.log("this.slides.length = ", this.slides.length);
+          // console.log("this.slides.length = ", this.slides.length);
           this.slides.length == 0 ? this.messageEmpty = 'Não encontramos slides :(' : '';
         });
     }
@@ -69,32 +72,35 @@ export default {
 // #app {
 //   background-color: #f5f5f5;
 // }
-div#home___BV_inner_::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  background-image: url('/img/brand/carousel-before.png');
-  background-position: 0 top;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-div#home___BV_inner_::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  background-image: url('/img/brand/carousel-before.png');
-  background-position: 0 bottom;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
 
 .carousel {
+  
+  // div#home___BV_inner_::after {
+  //   content: '';
+  //   position: absolute;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   z-index: 1;
+  //   background-image: url('/img/brand/carousel-before.png');
+  //   background-position: 0 top;
+  //   background-size: contain;
+  //   background-repeat: no-repeat;
+  // }
+  &.show-frame {
+    div#home___BV_inner_::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background-image: url('/img/brand/carousel-before.png');
+      background-position: 0 bottom;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
   user-select: none;
   .empty {
     height: 500px;

@@ -74,7 +74,16 @@
     </div>
 </template>
 <script>
-export default {};
+    export default {
+        methods:{
+            menuSelected (){
+                localStorage.setItem("menuSelected", true);
+            }
+        },
+        created () {
+            this.menuSelected();
+        },
+    };
 </script>
 <style>
 </style>

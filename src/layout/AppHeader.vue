@@ -19,7 +19,7 @@
       <div class="row teste">
         <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
           <base-dropdown class="nav-item" menu-classes="dropdown-menu-md">
-            <a slot="title" href="#" class="nav-link" data-toggle="dropdown" role="button" @click="hideMenu">
+            <a slot="title" href="#" class="nav-link" data-toggle="dropdown" role="button">
               <!-- <i class="ni ni-ui-04 d-lg-none"></i> -->
               <span class="nav-link-inner--text">Quem somos</span>
             </a>
@@ -47,23 +47,23 @@
               </a>
             </div>
           </base-dropdown>
-          <li class="nav-item" v-if="!hideMenu">
-            <a slot="title" href="#donate" v-smooth-scroll class="nav-link" @click="hideMenu">
-              <span class="nav-link-inner--text">Quero doar{{menuSelected}}</span>
+          <li class="nav-item" v-if="!menuSelected">
+            <a slot="title" href="#donate" v-smooth-scroll class="nav-link">
+              <span class="nav-link-inner--text">Quero doar</span>
             </a>
           </li>
-          <li class="nav-item" v-if="!hideMenu">
-            <a slot="title" href="#services" v-smooth-scroll class="nav-link" @click="hideMenu">
+          <li class="nav-item" v-if="!menuSelected">
+            <a slot="title" href="#services" v-smooth-scroll class="nav-link">
                 <span class="nav-link-inner--text">O que oferecemos</span>
             </a>
           </li>
-          <li class="nav-item" v-if="!hideMenu">
-            <a slot="title" href="#team" v-smooth-scroll class="nav-link" @click="hideMenu">
+          <li class="nav-item" v-if="!menuSelected">
+            <a slot="title" href="#team" v-smooth-scroll class="nav-link">
                 <span class="nav-link-inner--text">Nossa equipe</span>
             </a>
           </li>
           <li class="nav-item">
-            <router-link slot="title" class="nav-link" to="/transparency" @click="hideMenu">
+            <router-link slot="title" class="nav-link" to="/transparency">
                 <span class="nav-link-inner--text">Tranparência</span>
             </router-link>
           </li>
@@ -191,12 +191,14 @@ export default {
   data() {
     return {
       logged: false,
-      // menuSelected: '' ,
+      menuSelected: false,
     };
   },
   methods: {
     hideMenu() {
-      return this.menuSelected = localStorage.menuSelected ? true : false;
+      setTimeout(() => {
+        this.menuSelected = localStorage.getItem('menuSelected') ? true : false;
+      }, 600);
     },
     sign: function(event) {
       localStorage.removeItem("user");
@@ -204,13 +206,18 @@ export default {
     }
   },
   created() {
-    this.hideMenu();
+      this.hideMenu();
     try {
       this.logged = JSON.parse(localStorage.getItem("user")).token
         ? true
         : false;
     } catch (error) {
       this.logged = false;
+    }
+  },
+  watch:{
+    $route (to, from){
+      this.hideMenu();
     }
   }
 };

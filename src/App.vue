@@ -8,7 +8,7 @@
       </main>
       <div>
         <a href="#home" v-smooth-scroll class="fab first" v-if="showButtonTop">
-           <i class="fa fa-arrow-up"></i>
+          <i class="fa fa-arrow-up"></i>
         </a>
         <a href="https://pag.ae/bhg8d0n" target="blank" class="fab">
           <img class="donate-app-img" src="img/brand/icons/hand.svg">
@@ -60,10 +60,17 @@ export default {
   }
   .fab {
     &.first {
-      bottom: 90px;
+      // bottom: 90px;
+      // margin: 0 auto;
+      // left: 0;
+      // right: 0;
+      // background: #f88e9e;
+      // border-radius: 50px;
+      // width: 45px;
+      // height: 45px;
       margin: 0 auto;
-      left: 0;
-      right: 0;
+      left: 20px;
+      right: initial;
       background: #f88e9e;
       border-radius: 50px;
       width: 45px;
@@ -99,6 +106,8 @@ export default {
     .fab {
       &.first {
         bottom: 16px;
+        left: 0;
+        right: 0;
       }
     }
   }

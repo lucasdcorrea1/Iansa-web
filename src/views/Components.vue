@@ -1,6 +1,6 @@
 <template>
     <div>
-      <carousel></carousel>
+      <carousel :show-frame="true" :change-storage="true"></carousel>
       <donate></donate>
       <services></services>
       <team></team>
