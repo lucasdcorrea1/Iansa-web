@@ -55,7 +55,7 @@ export default {
       this.loading = true;
       const config = {
         methods: "GET",
-        url: "http://localhost:3000/transparency/getAll"
+        url: "https://iansa-api.herokuapp.com/transparency/getAll"
       };
       await axios(config)
         .then(res => {
