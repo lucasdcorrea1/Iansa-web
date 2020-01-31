@@ -11,8 +11,10 @@
            <i class="fa fa-arrow-up"></i>
         </a>
         <a href="https://pag.ae/bhg8d0n" target="blank" class="fab">
-          <img src="img/brand/icons/hand.svg">
+          <img class="donate-app-img" src="img/brand/icons/hand.svg">
+          <span class="img-span">
           Quero doar
+          </span>
         </a>
       </div>
     <router-view name="footer"></router-view>
@@ -97,6 +99,17 @@ export default {
     .fab {
       &.first {
         bottom: 16px;
+      }
+    }
+  }
+  @media screen and (max-width: 550px) {
+    .fab {
+      img {
+        width: 34px;
+        margin-right: 0px;
+      }
+      span {
+        display:none;
       }
     }
   }

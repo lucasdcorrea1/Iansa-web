@@ -161,7 +161,7 @@ export default {
         },
         {
           image: 'https://www.iansa.org.br/static/media/adriana.000e1a80.jpg',
-          name: 'ADRIANA CRISTINA ALVES BATISTA',
+          name: 'ADRIANA CRISTINA ALVES',
           office: 'Assistente Social'
         },
         {

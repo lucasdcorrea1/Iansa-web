@@ -20,6 +20,7 @@ import DownloadSection from "./components/DownloadSection";
 import Donate from "./components/Donate";
 import Services from "./components/Services";
 import Team from "./components/Team";
+import Partners from "./components/Partners";
 
 export default {
   name: "components",
@@ -36,7 +37,8 @@ export default {
     DownloadSection,
     Donate,
     Services,
-    Team
+    Team,
+    Partners
   }
 };
 </script>

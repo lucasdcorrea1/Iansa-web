@@ -18,15 +18,16 @@
                     <header>
                         <div class="user-info">
                             <span>{{slide.title}}</span>
-                            <span class="place">{{slide.createdAt}}</span>
                         </div>
                     </header>
                     <img :src="slide.url" alt="" />
                     <footer>
+                        <div className="actions">
+                        </div>
                         <strong>{{slide.title}}</strong>
                         <p>
                             {{slide.description}}
-                            <span>{{slide.name}}</span>
+                            <span>{{slide.createdAt}}</span>
                         </p>
                     </footer>
                 </article> 
@@ -54,7 +55,7 @@ export default {
       this.loading = true;
       const config = {
         methods: "GET",
-        url: "https://iansa-api.herokuapp.com/transparency/getAll"
+        url: "http://localhost:3000/transparency/getAll"
       };
       await axios(config)
         .then(res => {
