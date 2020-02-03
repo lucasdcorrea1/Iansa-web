@@ -51,17 +51,23 @@
               </div>
               <div>
                 <div class="row">
-                  <div class="col-md-6">
+                  <div class="col-md-12">
                     <base-input 
                       placeholder="Titulo"
                       v-model="title">
                     </base-input>
                   </div>
-                  <div class="col-md-6">
-                    <base-input 
-                      placeholder="Data de expiração"
-                      v-model="expirationDate">
-                    </base-input>
+                  <div class="col-md-12">
+                   <base-input addon-left-icon="ni ni-calendar-grid-58">
+                <flat-picker slot-scope="{focus, blur}"
+                             @on-open="focus"
+                             @on-close="blur"
+                             @eventParent
+                             :config="{allowInput: true}"
+                             class="form-control datepicker"
+                             v-model="dates.simple">
+                </flat-picker>
+            </base-input>
                   </div>
                   </div>
                     <textarea 
@@ -95,25 +101,35 @@ import axios from 'axios'
 import Vue from 'vue';
 import VueToast from 'vue-toast-notification';
 import 'vue-toast-notification/dist/index.css';
+import flatPicker from "vue-flatpickr-component";
+import "flatpickr/dist/flatpickr.css";
 export default {
   name: 'register-events',
   data () {
     return {
+      dates: {
+        simple: "2020-01-1",
+      },
       files: [],
-      expirationDate: '',
       title: '',
       description: '',
       submitButton: false
     }
   },
   components: {
-    ImageUploader
+    ImageUploader,
+    flatPicker
   },  
   created () {
+    localStorage.setItem("menuSelected", true);
     Vue.use(ImageUploader);
     Vue.use(VueToast, {position: 'top-right'});
   },
   methods: {
+     setMessage(msg) {
+          this.welcomeMsg = msg;
+          console.log(msg)
+        },
     removeFile( key ){
     this.files.splice( key, 1 );
     this.getImagePreviews();
@@ -149,7 +165,7 @@ export default {
           });
           return false;
       }
-      if(!this.expirationDate.length){
+      if(!this.dates.simple.length){
           Vue.$toast.open({
             message: 'Campo data de expiração esta vázio!',
             type: 'error',
@@ -177,7 +193,7 @@ export default {
         }
         let formData = new FormData();
         formData.append('file', this.files[i]);
-        formData.append('expirationDate', this.expirationDate);
+        formData.append('expirationDate', this.dates.simple);
         formData.append('title', this.title);
         formData.append('description', this.description);
         

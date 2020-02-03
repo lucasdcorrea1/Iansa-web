@@ -105,6 +105,7 @@ export default {
     ImageUploader
   },  
   created () {
+    localStorage.setItem("menuSelected", true);
     Vue.use(ImageUploader);
     Vue.use(VueToast, {position: 'top-right'});
   },

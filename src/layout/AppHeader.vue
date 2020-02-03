@@ -24,27 +24,16 @@
               <span class="nav-link-inner--text">Quem somos</span>
             </a>
             <div class="dropdown-menu-inner">
-              <a
-                href="https://demos.creative-tim.com/vue-argon-design-system/documentation/"
-                class="media d-flex align-items-center"
-              >
+              <router-link to="/history" class="media d-flex align-items-center">
                 <div class="media-body ml-2">
                   <h6 class="heading text-primary mb-md-1">História</h6>
                 </div>
-              </a>
+              </router-link>
               <router-link to="/about" class="media d-flex align-items-center">
                 <div class="media-body ml-2">
                   <h6 class="heading text-primary mb-md-1">Sobre</h6>
                 </div>
               </router-link>
-              <a
-                href="https://demos.creative-tim.com/vue-argon-design-system/documentation/"
-                class="media d-flex align-items-center"
-              >
-                <div class="media-body ml-2">
-                  <h5 class="heading text-warning mb-md-1">Apoiadores</h5>
-                </div>
-              </a>
             </div>
           </base-dropdown>
           <li class="nav-item" v-if="!menuSelected">

@@ -12,6 +12,7 @@ import Profile from "./views/Profile.vue";
 import ForgotPassword from "./views/ForgotPassword.vue";  
 import ResetPassword from "./views/ResetPassword.vue";  
 import About from "./views/About.vue"; 
+import History from "./views/History.vue"; 
 import Transparency from "./views/Transparency.vue"; 
 
 Vue.use(Router);
@@ -48,6 +49,15 @@ export default new Router({
       }
     },
     {
+      path: "/history",
+      name: "history",
+      components: {
+        header: AppHeader,
+        default: History,
+        footer: AppFooter
+      }
+    },
+    {
       path: "/login",
       name: "login",
       components: {
@@ -55,7 +65,7 @@ export default new Router({
       }
     },
     {
-      path: "/forgotPassword",
+      path: "/forgotpassword",
       name: "ForgotPassword",
       components: {
         default: ForgotPassword
@@ -88,7 +98,7 @@ export default new Router({
     },
     {
       path: "/registertransparency",
-      name: "registerTransparency",
+      name: "RegisterTransparency",
       components: {
         header: AppHeader,
         default: RegisterTransparency,
@@ -97,7 +107,7 @@ export default new Router({
     },
     {
       path: "/profile",
-      name: "profile",
+      name: "Profile",
       components: {
         header: AppHeader,
         default: Profile,
@@ -106,7 +116,7 @@ export default new Router({
     },
     {
       path: "/transparency",
-      name: "transparency",
+      name: "Transparency",
       components: {
         header: AppHeader,
         default: Transparency,

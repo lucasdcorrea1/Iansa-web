@@ -61,8 +61,14 @@
                     </a>
                     <a target="_blank" rel="noopener" href="https://www.youtube.com/channel/UCm1doV9akgJHh517-FnxULA/featured"
                        class="btn btn-neutral btn-icon-only btn-youtube btn-round btn-lg" data-toggle="tooltip"
-                       data-original-title="Star on Github">
+                       data-original-title="Star on youtube">
                         <i class="fa fa-youtube"></i>
+                    </a>
+                    <a target="_blank" rel="noopener" href="https://api.whatsapp.com/send?1=pt_BR&phone=5516994123795"
+                       class="btn btn-neutral btn-icon-only btn-round btn-lg" data-toggle="tooltip"
+                       data-original-title="Star on whatsapp"
+                       style="background-color: #4dec69; color:#fff">
+                        <i class="fa fa-whatsapp"></i>
                     </a>
                 </div>
             </div>

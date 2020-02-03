@@ -62,12 +62,12 @@
                 shadow
                 body-classes="py-5"
                 @click.native="handleAction(2)"
-                :style="`background-color: rgb(255, 237, 0);margin-top: 40px;`">
-                <img :src="`img/brand/banco-do-brasil.png`" style="max-width: 50%;"/>
-                <h6 class="text-uppercase">Agência : 0263-1</h6>
-                <h6 class="text-uppercase">Conta Corrente : 133283-0</h6>
-                <h6 class="text-uppercase">CNPJ: 13.512.905/000192</h6>
-                <h6 class="text-uppercase">Razão social: Instituição de Apoio Nossa Senhora Aparecida</h6>
+                :style="`background-color: rgb(204, 10, 47);margin-top: 40px;`">
+                <img :src="`img/brand/bradesco-logo.png`" style="max-width: 50%;"/>
+                <h5 class="text-uppercase">Agência : 0263-1</h5>
+                <h5 class="text-uppercase">Conta Corrente : 133283-0</h5>
+                <h5 class="text-uppercase">CNPJ: 13.512.905/000192</h5>
+                <h5 class="text-uppercase">Razão social: Instituição de Apoio Nossa Senhora Aparecida</h5>
               </card>
               </div>
           </div>
@@ -118,7 +118,7 @@ export default {
 </script>
 <style lang="scss">
 .text-uppercase { 
-  color: #393185 !important;
+  color: #fff !important;
 }
 .card-body {
   cursor: pointer;
