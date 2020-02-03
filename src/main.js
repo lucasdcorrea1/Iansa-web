@@ -4,17 +4,20 @@ import App from "./App.vue";
 import router from "./router";
 import Argon from "./plugins/argon-kit";
 import './registerServiceWorker'
+import VueLazyload from 'vue-lazyload'
 
 Vue.config.productionTip = false;
 Vue.use(Argon);
 Vue.use(VueSmoothScroll);
+Vue.use(VueLazyload)
 
 
 router.beforeEach((to, from, next) => {
   //redirect to login page if not logged in and trying to access a restricted page
   const publicPages = [
     "registerEvents",
-    "register"
+    "register",
+    "registertranparency"
   ];
   const path = to.path.split("/")[1].toString();
   const authRequired = publicPages.includes(path);

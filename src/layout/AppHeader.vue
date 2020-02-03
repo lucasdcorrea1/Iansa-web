@@ -80,7 +80,8 @@
             </a>
             <router-link to="/login" class="dropdown-item">Login</router-link>
             <router-link v-if="logged" to="/register" class="dropdown-item">Cadastrar Usuário</router-link>
-            <router-link v-if="logged" to="/registerEvents" class="dropdown-item">Cadastrar Eventos</router-link>
+            <router-link v-if="logged" to="/registerevents" class="dropdown-item">Cadastrar Eventos</router-link>
+            <router-link v-if="logged" to="/registertransparency" class="dropdown-item">Cadastrar Documento de Transparência</router-link>
             <a
               rel="noopener"
               data-toggle="tooltip"

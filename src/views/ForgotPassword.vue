@@ -54,7 +54,7 @@
                         </div>
                         <div class="col-6 text-right">
                             <router-link to="/" class="text-light">
-                                <small>home</small>
+                                <small>Home</small>
                             </router-link>
                         </div>
                     </div>
@@ -65,6 +65,10 @@
 </template>
 <script>
 import axios from 'axios';
+import Vue from 'vue';
+import VueToast from 'vue-toast-notification';
+import 'vue-toast-notification/dist/index.css';
+
 export default {
   data: () => {
     return {
@@ -76,7 +80,7 @@ export default {
     this.email = "";
   },
   created () {
-    // reset login status
+    Vue.use(VueToast, {position: 'top-right'});
     window.addEventListener("keypress", e => {
       if (e.key == "Enter") {
         this.submit();
@@ -86,7 +90,7 @@ export default {
   methods: {
     async submit () {
       if (this.email.length) {
-          this.submitButton = true;
+        this.submitButton = true;
         const config = {
                 data: {email: this.email},
                 method: "POST",
@@ -100,12 +104,24 @@ export default {
         await axios(`https://iansa-api.herokuapp.com/auth/forgotpassword`, config, {
         }).then(res => {
             if (res) {
+            Vue.$toast.open({
+                message: 'Enviamos o token de autorização para o e-mail '+ this.email,
+                type: 'success',
+            });
                 this.$router.push({ path: "/resetpassword" });
             }
         }).catch(err => {
-         console.log(err.error)
+            Vue.$toast.open({
+                message: 'Usuário não encontrado!',
+                type: 'error',
+            });
         }).finally(() => {
             this.submitButton = false;
+        });
+      }else{
+        Vue.$toast.open({
+            message: 'Informe um e-mail válido!',
+            type: 'error',
         });
       }
     },

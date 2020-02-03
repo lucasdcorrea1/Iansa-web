@@ -49,14 +49,33 @@
                                 <div class="text-center">
                                     <base-button 
                                         type="primary" 
-                                        class="my-4" 
+                                        class="my-4"
+                                        :disabled="submitButton"
                                         @click="submit()">
-                                        Create account
+                                        Cadastrar
                                     </base-button>
                                 </div>
                             </form>
                         </template>
                     </card>
+                     <div class="row mt-3">
+            <div class="col-6">
+              <router-link
+                to="/login"
+                class="text-light"
+              >
+                <small>login</small>
+              </router-link>
+            </div>
+            <div class="col-6 text-right">
+              <router-link
+                to="/"
+                class="text-light"
+              >
+                <small>Página Inicial</small>
+              </router-link>
+            </div>
+          </div>
                 </div>
             </div>
         </div>
@@ -64,12 +83,17 @@
 </template>
 <script>
 import axios from 'axios';
+ import Vue from 'vue';
+import VueToast from 'vue-toast-notification';
+import 'vue-toast-notification/dist/index.css';
+
 export default {
   data: () => {
     return {
         name: '',
         email: '',
-        password: ''
+        password: '',
+        submitButton: false
    }
   },
 //   beforeDestroy () {
@@ -78,33 +102,68 @@ export default {
 //     this.form.name = "";
 //   },
   created () {
+       Vue.use(VueToast, {position: 'top-right'});
   },
   methods: {
-    async submit () {
-        const formSubmit = {
-          name: this.name,
-          email: this.email,
-          password: this.password
+    async validParameters() {
+        if(!this.email.length){
+          Vue.$toast.open({
+            message: 'Campo email esta vázio!',
+            type: 'error',
+          });
+          return false;
         }
-        if(this.name.length && this.email.length && this.password.length){
+        if(!this.name.length){
+          Vue.$toast.open({
+            message: 'Campo nome esta vázio!',
+            type: 'error',
+            });
+            
+            return false;
+        }
+        if(!this.password.length){
+          Vue.$toast.open({
+            message: 'Campo password esta vázio!',
+            type: 'error',
+          });
+          return false;
+        }
+      return true;
+    },
+    async submit () {
+        if(await this.validParameters()){
+        this.submitButton = true;
+            const formSubmit = {
+                name: this.name,
+                email: this.email,
+                password: this.password
+            };
             const config = {
                 data: formSubmit,
                 method: "POST",
                 headers: {Authorization:`${JSON.parse(localStorage.getItem("user")).token}`} 
-            }
+            };
             await axios('https://iansa-api.herokuapp.com/auth/register', config)
             .then(res => {
                 if (res) {
-                    alert(res.data);
+                    Vue.$toast.open({
+                        message: 'Usuário cadastrado com sucesso!',
+                        type: 'success',
+                    });
                 }
             })
             .catch(err => {
-                alert(err);
+                Vue.$toast.open({
+                    message: 'Erro ao realizar cadastro'+ err,
+                    type: 'error',
+                });
+                
             })
             .finally(() => {
-                // this.loading = false;
+                this.submitButton = false;
             });
-        }
+        
+      }
     },
   }
 };

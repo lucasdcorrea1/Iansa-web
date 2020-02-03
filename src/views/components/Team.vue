@@ -130,7 +130,7 @@ export default {
       team: [
         {
           image: '../public',
-          // image: 'https://www.iansa.org.br/static/media/eliane.40db9e67.jpg',
+          image: 'https://www.iansa.org.br/static/media/eliane.40db9e67.jpg',
           name: 'ELIANE BONINE',
           office: 'Fundadora'
         },

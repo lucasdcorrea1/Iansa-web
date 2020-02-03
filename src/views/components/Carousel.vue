@@ -6,7 +6,7 @@
           <b-carousel-slide class="font-title"
             v-for="(slide, index) in slides" :key="index"
             :img-src="slide.url">
-            {{slide.title}} - {{showFrame}}
+            {{slide.title}}
           </b-carousel-slide>
         </div>
         <div v-else class="empty font-title">

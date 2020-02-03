@@ -31,7 +31,7 @@
             </template>
             <template>
               <div class="text-center text-muted mb-4">
-                <small>Ou entre com suas credenciais</small>
+                <small>d\fhivjknsklf nslfbvSIlb</small>
               </div>
               <form role="form">
                 <base-input
@@ -86,6 +86,10 @@
 </template>
 <script>
 import axios from 'axios';
+import Vue from 'vue';
+import VueToast from 'vue-toast-notification';
+import 'vue-toast-notification/dist/index.css';
+
 export default {
   data: () => {
     return {
@@ -100,6 +104,7 @@ export default {
   },
   created () {
     // reset login status
+    Vue.use(VueToast, {position: 'top-right'});
     this.logout();
     window.addEventListener("keypress", e => {
       if (e.key == "Enter") {
@@ -108,8 +113,26 @@ export default {
     });
   },
   methods: {
+
+    async validParameters() {
+        if(!this.email.length){
+          Vue.$toast.open({
+            message: 'Campo email esta vázio!',
+            type: 'error',
+          });
+          return false;
+        }
+        if(!this.password.length){
+          Vue.$toast.open({
+            message: 'Campo password esta vázio!',
+            type: 'error',
+          });
+          return false;
+        }
+      return true;
+    },
     async submit () {
-      if (this.email.length && this.password.length) {
+      if (await this.validParameters()) {
         const data = {
           email: this.email,
           password: this.password
@@ -118,10 +141,17 @@ export default {
         }).then(response => {
           if (response) {
             localStorage.setItem("user", JSON.stringify(response.data));
+              Vue.$toast.open({
+                message: 'Bem-vindo!',
+                type: 'success',
+              });
             this.$router.push({ path: "/" });
           }
         }).catch(error => {
-          alert("Erro ao realizar Login: " + error);
+              Vue.$toast.open({
+                message: 'Usuário ou senha inválidos!',
+                type: 'error',
+              });
         })
       }
     },

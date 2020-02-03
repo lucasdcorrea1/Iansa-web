@@ -18,20 +18,20 @@
           class="card-profile card-upload mt--300"
           style="background-color:#b278d7a3"
           no-body>
-                    <div class="px-4">
-                        <div class="row justify-content-center">
-        <div class="text-center">
-                        <div>
-                  <h3 style="color:#fff; padding: 15px">Cadastrar novo evento!
+          <div class="px-4">
+            <div class="row justify-content-center">
+              <div class="text-center">
+                <div>
+                  <h3 style="color:#fff; padding: 15px">Cadastrar novo documento de transparência!
                   </h3>
                 </div>
-          <div v-show="files.length == 0" class="large-12 medium-12 small-12 filezone">
-            <input type="file" id="files" ref="files" multiple v-on:change="handleFiles()"/>
-              <p>
-                Arraste a imagem para ser anexada <br>Ou click aqui!
-              </p>
-          </div>
-          <div v-for="(file, key) in files" class="file-listing">
+                <div v-show="files.length == 0" class="large-12 medium-12 small-12 filezone">
+                  <input type="file" id="files" ref="files" multiple v-on:change="handleFiles()"/>
+                  <p>
+                    Arraste a imagem para ser anexada <br>Ou click aqui!
+                  </p>
+                </div>
+                <div v-for="(file, key) in files" class="file-listing">
             <div class="row">
               <div class="col-md-12">
                 <img class="preview" v-bind:ref="'preview'+parseInt(key)"/>
@@ -51,19 +51,13 @@
               </div>
               <div>
                 <div class="row">
-                  <div class="col-md-6">
+                  <div class="col-md-12">
                     <base-input 
                       placeholder="Titulo"
                       v-model="title">
                     </base-input>
                   </div>
-                  <div class="col-md-6">
-                    <base-input 
-                      placeholder="Data de expiração"
-                      v-model="expirationDate">
-                    </base-input>
-                  </div>
-                  </div>
+             <div class="col-md-12">
                     <textarea 
                       class="form-control" 
                       id="exampleFormControlTextarea1" 
@@ -71,6 +65,8 @@
                       placeholder="Descrição do evento ..."
                       v-model="description">
                     </textarea>
+                         </div>
+                         </div>
                   </div>
                 </div>
                    <base-button 
@@ -79,7 +75,7 @@
                       type="primary" 
                       class="my-4" 
                       @click="submit()">
-                      Cadastrar Evento
+                      Cadastrar Documento
                     </base-button>
               </div>
             </div>
@@ -100,7 +96,6 @@ export default {
   data () {
     return {
       files: [],
-      expirationDate: '',
       title: '',
       description: '',
       submitButton: false
@@ -114,6 +109,23 @@ export default {
     Vue.use(VueToast, {position: 'top-right'});
   },
   methods: {
+    async validParameters() {
+       if(!this.title.length){
+          Vue.$toast.open({
+            message: 'Campo titulo esta vázio!',
+            type: 'error',
+          });
+          return false;
+      }
+      if(!this.description.length){
+          Vue.$toast.open({
+            message: 'Campo de descrição esta vázio!',
+            type: 'error',
+          });
+          return false;
+      }
+      return true;
+    },
     removeFile( key ){
     this.files.splice( key, 1 );
     this.getImagePreviews();
@@ -141,47 +153,21 @@ export default {
         }
         this.getImagePreviews();
     },
-    async validParameters() {
-      if(!this.title.length){
-          Vue.$toast.open({
-            message: 'Campo titulo esta vázio!',
-            type: 'error',
-          });
-          return false;
-      }
-      if(!this.expirationDate.length){
-          Vue.$toast.open({
-            message: 'Campo data de expiração esta vázio!',
-            type: 'error',
-            });
-            
-            return false;
-      }
-      if(!this.description.length){
-          Vue.$toast.open({
-            message: 'Campo de descrição esta vázio!',
-            type: 'error',
-          });
-          return false;
-      }
-      return true;
-    },
     
     async submit() {
-        
         if(await this.validParameters()){
-          this.submitButton = true;
+        this.submitButton = true;
+
         for( let i = 0; i < this.files.length; i++ ){
         if(this.files[i].id) {
             continue;
         }
         let formData = new FormData();
         formData.append('file', this.files[i]);
-        formData.append('expirationDate', this.expirationDate);
         formData.append('title', this.title);
         formData.append('description', this.description);
         
-        await axios.post('https://iansa-api.herokuapp.com/slideshow/create',
+       await axios.post('https://iansa-api.herokuapp.com/transparency/create',
             formData,
             {
                 headers: {
@@ -193,7 +179,7 @@ export default {
             if (data){
               this.files = [];
               Vue.$toast.open({
-                message: 'Evento cadastrado com sucesso!',
+                message: 'Documento de transparência cadastrado com sucesso!',
                 type: 'success',
               });
             }
@@ -201,17 +187,16 @@ export default {
                        if (data){
               this.files = [];
               Vue.$toast.open({
-                message: 'Erro ao cadastrar evento!',
+                message: 'Erro ao cadastrar documento de transparência!',
                 type: 'error',
               });
             }
         }).finally(() => {
                 this.submitButton = false;
         });
-        this.submitButton = false;
       }
-      
         }
+
     },
     
     beforeRemove (index, done, fileList) {

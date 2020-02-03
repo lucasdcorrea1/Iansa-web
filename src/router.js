@@ -7,6 +7,7 @@ import Landing from "./views/Landing.vue";
 import Login from "./views/Login.vue";
 import Register from "./views/Register.vue";
 import RegisterEvents from "./views/RegisterEvents.vue";
+import RegisterTransparency from "./views/RegisterTransparency.vue";
 import Profile from "./views/Profile.vue";
 import ForgotPassword from "./views/ForgotPassword.vue";  
 import ResetPassword from "./views/ResetPassword.vue";  
@@ -77,11 +78,20 @@ export default new Router({
       }
     },
     {
-      path: "/registerEvents",
+      path: "/registerevents",
       name: "registerEvents",
       components: {
         header: AppHeader,
-        default: Register,
+        default: RegisterEvents,
+        footer: AppFooter
+      }
+    },
+    {
+      path: "/registertransparency",
+      name: "registerTransparency",
+      components: {
+        header: AppHeader,
+        default: RegisterTransparency,
         footer: AppFooter
       }
     },

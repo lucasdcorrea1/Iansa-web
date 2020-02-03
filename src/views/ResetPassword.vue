@@ -31,6 +31,7 @@
                                             class="mb-3"
                                             placeholder="Email"
                                             addon-left-icon="fa fa-envelope"
+                                            type="email"
                                             v-model="email">
                                 </base-input>
                                 <base-input alternative
@@ -43,6 +44,7 @@
                                             class="mb-3"
                                             placeholder="Senha"
                                             addon-left-icon="fa fa-unlock"
+                                            type="password"
                                             v-model="password">
                                 </base-input>
                                 <div class="text-center">
@@ -77,6 +79,10 @@
 </template>
 <script>
 import axios from 'axios';
+import Vue from 'vue';
+import VueToast from 'vue-toast-notification';
+import 'vue-toast-notification/dist/index.css';
+
 export default {
   data: () => {
     return {
@@ -92,7 +98,7 @@ export default {
     this.password = "";
   },
   created () {
-    // reset login status
+    Vue.use(VueToast, {position: 'top-right'});
     window.addEventListener("keypress", e => {
       if (e.key == "Enter") {
         this.submit();
@@ -121,10 +127,22 @@ export default {
         await axios(`https://iansa-api.herokuapp.com/auth/resetpassword`, config, {
         }).then(res => {
             if (res) {
+            Vue.$toast.open({
+                message: 'Senha alterada com sucesso!',
+                type: 'success',
+            });
                 this.$router.push({ path: "/login" });
             };
         }).catch(err => {
-         console.log(err.error)
+            Vue.$toast.open({
+                message: 'Não foi possivel realizar a troca de senha!',
+                type: 'error',
+            });
+        });
+      }else{
+        Vue.$toast.open({
+            message: 'Existem campos vázios!',
+            type: 'error',
         });
       }
     },

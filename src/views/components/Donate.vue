@@ -41,7 +41,37 @@
               </card>
               <!-- <pre> {{cards}} </pre> -->
             </div>
+            <div class="col-lg-6">
+              <card 
+                class="border-0"
+                hover
+                shadow
+                body-classes="py-5"
+                @click.native="handleAction(2)"
+                :style="`background-color: #21c25e;margin-top: 40px`">
+                <img :src="`img/brand/picpay-logo-9.png`" style="max-width: 50%;"/>
+                <div class="col-lg-12">
+                <img :src="`img/brand/qrcode.png`" style="max-width: 50%;border-radius: 6px;"/>
+                </div>
+              </card>
+              </div>
+            <div class="col-lg-6" style="color: #393185;">
+              <card 
+                class="border-0"
+                hover
+                shadow
+                body-classes="py-5"
+                @click.native="handleAction(2)"
+                :style="`background-color: rgb(255, 237, 0);margin-top: 40px;`">
+                <img :src="`img/brand/banco-do-brasil.png`" style="max-width: 50%;"/>
+                <h6 class="text-uppercase">Agência : 0263-1</h6>
+                <h6 class="text-uppercase">Conta Corrente : 133283-0</h6>
+                <h6 class="text-uppercase">CNPJ: 13.512.905/000192</h6>
+                <h6 class="text-uppercase">Razão social: Instituição de Apoio Nossa Senhora Aparecida</h6>
+              </card>
+              </div>
           </div>
+
         </div>
       </div>
     </div>
@@ -87,6 +117,9 @@ export default {
 };
 </script>
 <style lang="scss">
+.text-uppercase { 
+  color: #393185 !important;
+}
 .card-body {
   cursor: pointer;
   .donate-img {
