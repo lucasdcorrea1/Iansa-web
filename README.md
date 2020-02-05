@@ -2,20 +2,26 @@ https://iansa-web.firebaseapp.com/#/
 
 ## Technologies
 
-  - Node.js;
-  - Reactjs ([Frontend](https://github.com/lucasdcorrea1/iansa-web));
+  - Node.js ([Backend](https://github.com/lucasdcorrea1/Iansa-backend));
+  - Vue.js ([Frontend](https://github.com/lucasdcorrea1/iansa-web));
   - [Check package.json](/src/package.json).
 
 ## Installation
 
 ```sh
 npm install
-```
-
-## Test
 
 ```sh
-npm dev
+npm install -g @vue/cli
+```
+
+## Start
+
+```sh
+vue ui
+
+```sh
+Run task server
 ```
 
 ## Release History
@@ -38,4 +44,4 @@ Please read [CONTRIBUTING](https://github.com/lucasdcorrea1/iansa-web) for detai
 
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 - **[MIT license](https://github.com/Data-Tongji/datatongji-backend/blob/master/LICENCE)**
-- Copyright 2019 © <a href="https://www.gitshowcase.com/lucasdcorrea1" target="_blank">Lucas Damas Corrêa</a>.
+- Copyright 2019 © <a href="https://www.gitshowcase.com/lucasdcorrea1" target="_blank">Lucas Damas Corrêa</a> &  <a href="https://www.gitshowcase.com/lucasdcorrea1" target="_blank">Wesley Pedro</a>.
