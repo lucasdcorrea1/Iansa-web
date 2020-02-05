@@ -1,21 +1,28 @@
-https://iansa-web.firebaseapp.com/#/
+# I.A.N.S.A
+> <p align="justify">Site iansa.</p>
+  - [Preview](https://iansa-web.firebaseapp.com/);
+
 
 ## Technologies
 
-  - Node.js;
-  - Reactjs ([Frontend](https://github.com/lucasdcorrea1/iansa-web));
+  - Node.js ([Backend](https://github.com/lucasdcorrea1/Iansa-backend));
+  - Vue.js ([Frontend](https://github.com/lucasdcorrea1/iansa-web));
   - [Check package.json](/src/package.json).
 
 ## Installation
 
 ```sh
 npm install
+
+npm install -g @vue/cli
 ```
 
-## Test
+## Start
 
 ```sh
-npm dev
+vue ui
+
+Run task server
 ```
 
 ## Release History
@@ -26,7 +33,8 @@ npm dev
 ## Authors
 
 [Lucas Damas](https://github.com/lucasdcorrea1) – lucas.dcorrea1@gmail.com
-[Wesley Pedro](https://github.com/https://github.com/wesley-rocha) – wesleypedro.r@gmail.com
+
+[Wesley Pedro](https://github.com/wesley-rocha) – wesleypedro.r@gmail.com
 
 
 ## Contributing
@@ -37,4 +45,4 @@ Please read [CONTRIBUTING](https://github.com/lucasdcorrea1/iansa-web) for detai
 
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 - **[MIT license](https://github.com/Data-Tongji/datatongji-backend/blob/master/LICENCE)**
-- Copyright 2019 © <a href="https://www.gitshowcase.com/lucasdcorrea1" target="_blank">Lucas Damas Corrêa</a>.
+- Copyright 2019 © <a href="https://www.gitshowcase.com/lucasdcorrea1" target="_blank">Lucas Damas Corrêa</a> &  <a href="https://github.com/wesley-rocha" target="_blank">Wesley Pedro</a>.
