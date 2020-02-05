@@ -85,7 +85,7 @@
                         <form role="form">
                             <base-input alternative
                                         class="mb-3"
-                                        placeholder="Email"
+                                        placeholder="E-mail"
                                         addon-left-icon="ni ni-email-83">
                             </base-input>
                             <base-input alternative

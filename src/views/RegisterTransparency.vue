@@ -16,7 +16,7 @@
         <card   
           shadow 
           class="card-profile card-upload mt--300"
-          style="background-color:#b278d7a3"
+          style="background: linear-gradient(150deg, #28148387 15%, #8f6ed5cc 70%, #d782d9 94%); border: none;"
           no-body>
           <div class="px-4">
             <div class="row justify-content-center">
@@ -26,10 +26,11 @@
                   </h3>
                 </div>
                 <div v-show="files.length == 0" class="large-12 medium-12 small-12 filezone">
+                <span class="btn btn-primary btn-file">
+                  <i class="fa fa-cloud-upload" aria-hidden="true"></i>
+                  Click aqui
                   <input type="file" id="files" ref="files" multiple v-on:change="handleFiles()"/>
-                  <p>
-                    Arraste a imagem para ser anexada <br>Ou click aqui!
-                  </p>
+                </span>
                 </div>
                 <div v-for="(file, key) in files" class="file-listing">
             <div class="row">
@@ -91,6 +92,7 @@ import axios from 'axios'
 import Vue from 'vue';
 import VueToast from 'vue-toast-notification';
 import 'vue-toast-notification/dist/index.css';
+import "../assets/css/input.css";
 export default {
   name: 'register-events',
   data () {
@@ -157,48 +159,47 @@ export default {
     
     async submit() {
         if(await this.validParameters()){
-        this.submitButton = true;
+          this.submitButton = true;
 
-        for( let i = 0; i < this.files.length; i++ ){
-        if(this.files[i].id) {
-            continue;
-        }
-        let formData = new FormData();
-        formData.append('file', this.files[i]);
-        formData.append('title', this.title);
-        formData.append('description', this.description);
+          for( let i = 0; i < this.files.length; i++ ){
+            if(this.files[i].id) {
+              continue;
+            }
+            let formData = new FormData();
+            formData.append('file', this.files[i]);
+            formData.append('title', this.title);
+            formData.append('description', this.description);
         
-       await axios.post('https://iansa-api.herokuapp.com/transparency/create',
-            formData,
-            {
-                headers: {
+            await axios.post('https://iansa-api.herokuapp.com/transparency/create',
+              formData,{
+                  headers: {
                     'Content-Type': 'multipart/form-data',
                     'Authorization':`${JSON.parse(localStorage.getItem("user")).token}`
-                }
-            }
-        ).then(function(data) {
-            if (data){
-              this.files = [];
-              Vue.$toast.open({
-                message: 'Documento de transparência cadastrado com sucesso!',
-                type: 'success',
-              });
-            }
-        }.bind(this)).catch(function(data) {
-                       if (data){
-              this.files = [];
-              Vue.$toast.open({
-                message: 'Erro ao cadastrar documento de transparência!',
-                type: 'error',
-              });
-            }
-        }).finally(() => {
-                this.submitButton = false;
-        });
-      }
+                  }
+              }
+            ).then(function(data) {
+              if (data){
+                this.files = [];
+                Vue.$toast.open({
+                  message: 'Documento de transparência cadastrado com sucesso!',
+                  type: 'success',
+                });
+              }
+            }.bind(this))
+            .catch(function(error) {
+              if (error){
+                this.files = [];
+                Vue.$toast.open({
+                  message: error.response.data.error,
+                  type: 'error',
+                });
+              }
+            }).finally(() => {
+              this.submitButton = false;
+            });
         }
-
-    },
+      }
+   },
     
     beforeRemove (index, done, fileList) {
       console.log('index', index, fileList)
@@ -216,78 +217,5 @@ export default {
 </script> 
  
 <style>
-.card-upload {
-  min-height: 304px;
-}
-input[type="file"]{
-        opacity: 0;
-        width: 100%;
-        height: 200px;
-        position: absolute;
-        cursor: pointer;
-    }
-    .filezone {
-      outline: 1px dashed #faf9fc;
-      margin: 0 auto;
-      top: 25px;
-      outline-offset: -10px;
-      background: #ab4a9e;
-      color: #f4f2f9;
-      /* padding: 10px 10px; */
-      /* min-height: 200px; */
-      border-radius: 22px;
-      /* height: 144px; */
-      /* width: 307px; */
-      position: relative;
-      cursor: pointer;
-    }
-    .filezone:hover {
-        background: #db82d0;
-    }
 
-    .filezone p {
-        font-size: 1.2em;
-        text-align: center;
-        padding: 50px 50px 50px 50px;
-    }
-    div.file-listing img{
-        height: 20%; 
-        border-radius: 5px;
-    }
-
-    div.file-listing{
-        margin: auto;
-        padding: 10px;
-        border-bottom: 1px solid #ddd;
-    }
-
-    div.file-listing img{
-        height: 100px;
-    }
-    div.success-container{
-        text-align: center;
-        color: green;
-    }
-
-    div.remove-container{
-        text-align: center;
-    }
-
-    div.remove-container a{
-        color: red;
-        cursor: pointer;
-    }
-
-    a.submit-button{
-        display: block;
-        margin: auto;
-        text-align: center;
-        width: 200px;
-        padding: 10px;
-        text-transform: uppercase;
-        background-color: #CCC;
-        color: white;
-        font-weight: bold;
-        margin-top: 20px;
-    }
 </style> 

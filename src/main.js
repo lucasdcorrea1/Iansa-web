@@ -15,9 +15,9 @@ Vue.use(VueLazyload)
 router.beforeEach((to, from, next) => {
   //redirect to login page if not logged in and trying to access a restricted page
   const publicPages = [
-    "registerEvents",
+    "registerevents",
     "register",
-    "registertranparency"
+    "registertransparency"
   ];
   const path = to.path.split("/")[1].toString();
   const authRequired = publicPages.includes(path);

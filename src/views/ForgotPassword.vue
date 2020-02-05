@@ -29,7 +29,7 @@
                             <form role="form">
                                 <base-input alternative
                                             class="mb-3"
-                                            placeholder="Email"
+                                            placeholder="E-mail"
                                             addon-left-icon="ni ni-email-83"
                                             v-model="email">
                                 </base-input>
@@ -110,9 +110,9 @@ export default {
             });
                 this.$router.push({ path: "/resetpassword" });
             }
-        }).catch(err => {
+        }).catch(error => {
             Vue.$toast.open({
-                message: 'Usuário não encontrado!',
+                message: error.response.data.error,
                 type: 'error',
             });
         }).finally(() => {

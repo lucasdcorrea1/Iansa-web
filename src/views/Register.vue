@@ -36,7 +36,7 @@
                                 </base-input>
                                 <base-input alternative
                                             class="mb-3"
-                                            placeholder="Email"
+                                            placeholder="E-mail"
                                             addon-left-icon="ni ni-email-83"
                                             v-model="email">
                                 </base-input>
@@ -152,12 +152,11 @@ export default {
                     });
                 }
             })
-            .catch(err => {
+            .catch(error => {
                 Vue.$toast.open({
-                    message: 'Erro ao realizar cadastro'+ err,
-                    type: 'error',
+                  message: error.response.data.error,
+                  type: 'error',
                 });
-                
             })
             .finally(() => {
                 this.submitButton = false;

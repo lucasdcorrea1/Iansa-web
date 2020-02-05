@@ -4,6 +4,7 @@
       <donate></donate>
       <services></services>
       <team></team>
+      <partners></partners>
     </div>
 </template>
 <script>

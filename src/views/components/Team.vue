@@ -70,7 +70,7 @@
             </div>
             <div class="at-user__name">{{item.name}}</div>
             <div class="at-user__title">{{item.office}}</div>
-            <ul class="at-social">
+          <!--  <ul class="at-social">
               <li class="at-social__item">
                 <a href>
                   <svg
@@ -116,7 +116,7 @@
                   </svg>
                 </a>
               </li>
-            </ul>
+            </ul>-->
           </div>
         </div>
       </div>

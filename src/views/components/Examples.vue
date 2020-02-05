@@ -56,7 +56,7 @@
                                 </div>
                                 <form role="form">
                                     <base-input alternative
-                                                placeholder="Email"
+                                                placeholder="E-mail"
                                                 addon-left-icon="ni ni-email-83">
                                     </base-input>
                                     <base-input alternative

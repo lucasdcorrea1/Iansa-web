@@ -29,7 +29,7 @@
                             <form role="form">
                                 <base-input alternative
                                             class="mb-3"
-                                            placeholder="Email"
+                                            placeholder="E-mail"
                                             addon-left-icon="fa fa-envelope"
                                             type="email"
                                             v-model="email">
@@ -106,8 +106,33 @@ export default {
     });
   },
   methods: {
+      async validParameters() {
+        if(!this.email.length){
+          Vue.$toast.open({
+            message: 'Campo email esta vázio!',
+            type: 'error',
+          });
+          return false;
+        }
+        if(!this.token.length){
+          Vue.$toast.open({
+            message: 'Campo token esta vázio!',
+            type: 'error',
+            });
+            
+            return false;
+        }
+        if(!this.password.length){
+          Vue.$toast.open({
+            message: 'Campo password esta vázio!',
+            type: 'error',
+          });
+          return false;
+        }
+      return true;
+    },
     async submit () {
-      if (this.email.length) {
+      if (await this.validParameters()) {
           const parameters = {
               email: this.email,
               token: this.token,
@@ -127,24 +152,19 @@ export default {
         await axios(`https://iansa-api.herokuapp.com/auth/resetpassword`, config, {
         }).then(res => {
             if (res) {
-            Vue.$toast.open({
-                message: 'Senha alterada com sucesso!',
-                type: 'success',
-            });
+                Vue.$toast.open({
+                    message: 'Senha alterada com sucesso!',
+                    type: 'success',
+                });
                 this.$router.push({ path: "/login" });
             };
-        }).catch(err => {
+        }).catch(error => {
             Vue.$toast.open({
-                message: 'Não foi possivel realizar a troca de senha!',
+                message: error.response.data.error,
                 type: 'error',
             });
         });
-      }else{
-        Vue.$toast.open({
-            message: 'Existem campos vázios!',
-            type: 'error',
-        });
-      }
+      };
     },
   }
 };

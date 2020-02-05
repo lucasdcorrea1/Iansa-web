@@ -47,11 +47,10 @@
                 hover
                 shadow
                 body-classes="py-5"
-                @click.native="handleAction(2)"
                 :style="`background-color: #21c25e;margin-top: 40px`">
                 <img :src="`img/brand/picpay-logo-9.png`" style="max-width: 50%;"/>
                 <div class="col-lg-12">
-                <img :src="`img/brand/qrcode.png`" style="max-width: 50%;border-radius: 6px;"/>
+                <img :src="`img/brand/iansa-picpay.png`" style="max-width: 50%;border-radius: 6px;"/>
                 </div>
               </card>
               </div>
@@ -61,7 +60,6 @@
                 hover
                 shadow
                 body-classes="py-5"
-                @click.native="handleAction(2)"
                 :style="`background-color: rgb(204, 10, 47);margin-top: 40px;`">
                 <img :src="`img/brand/bradesco-logo.png`" style="max-width: 50%;"/>
                 <h5 class="text-uppercase">Agência : 0263-1</h5>

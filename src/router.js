@@ -28,7 +28,7 @@ export default new Router({
         default: Components,
         footer: AppFooter
       },
-      alias: ['/team', '/donate', '/services', '/home']
+      alias: ['/team', '/donate', '/services', '/home', '/app']
     },
     {
       path: "/landing",

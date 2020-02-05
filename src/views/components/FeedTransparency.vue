@@ -1,42 +1,80 @@
 <template>
     <section id="transparency" class="section section-shaped trasparency">
-                <div class="shape shape-style-1">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div v-if="slides.length">
-            <div v-for="(slide, index) in slides" :key="index" id="post-list">
-               
-                <article>
-                    <header>
-                        <div class="user-info">
-                            <span>{{slide.title}}</span>
-                        </div>
-                    </header>
-                    <img :src="slide.url" alt="" />
-                    <footer>
-                        <div className="actions">
-                        </div>
-                        <strong>{{slide.title}}</strong>
-                        <p>
-                            {{slide.description}}
-                            <span>{{slide.createdAt}}</span>
-                        </p>
-                    </footer>
-                </article> 
-            </div>
-          </div>
+      <div class="shape shape-style-1">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    <div v-if="slides.length" style="position: relative">
+        <div v-for="(slide, index) in slides" :key="index" id="post-list">
+            <article v-if="slide.url.split('.').pop() !== 'pdf'">
+                <header>
+                    <div class="user-info">
+                        <span>{{slide.title}}</span>
+                    </div>
+                </header>
+                <img :src="slide.url" alt="" />
+                <footer>
+                    <div className="actions">
+                    </div>
+                    <strong>{{slide.title}}</strong>
+                    <p>
+                        {{slide.description}}
+                        <span>{{slide.createdAt}}</span>
+                    </p>
+                </footer>
+            </article>
+          <article v-else>
+            <header>
+              <div class="user-info">
+                <a @click="findValue(slide.url)">
+                  <img src="../../../public/img/brand/pdf.png" style="width: 15%;"/>
+                </a>
+              </div>
+            </header>
+            <div class="text-center">
+                <base-button 
+                  tag="a" 
+                  target="_blank"
+                  @click="findValue(slide.url)"
+                  type="primary" 
+                  size="lg" 
+                  style="color: #fff;
+                        background-color: #b865ac;
+                        border-color: #ab4a9e;
+                        margin: 48px;"
+                  class="active" 
+                  role="button" 
+                  aria-pressed="true">
+                  visualizar
+                  <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                </base-button>
+              </div>
+            <footer>
+              <div className="actions">
+              </div>
+              <strong>{{slide.title}}</strong>
+                <p>
+                  {{slide.description}}
+                  <span>{{slide.createdAt}}</span>
+                </p>
+                </footer>
+            </article> 
+
+        </div>
+      </div>
     </section>
 </template>
 <script>
 import axios from 'axios';
+import Vue from 'vue';
+import VueToast from 'vue-toast-notification';
 
 export default {
   name:'tranparency',
@@ -48,9 +86,18 @@ export default {
     };
   },
   created() {
+    Vue.use(VueToast, {position: 'top-right'});
     this.getFeed();
   },
   methods: {
+    findValue(url) {
+      console.log("CLICANDO", url);
+      window.open(url);
+      // var len = param.length;
+      // param.SubString()
+      // var batata = param.split(".").pop();
+      // console.log(batata);
+    },
     async getFeed() {
       this.loading = true;
       const config = {
@@ -63,15 +110,18 @@ export default {
             this.slides = res.data;
           }
         })
-        .catch(err => {
-          console.error(err);
+        .catch(error => {
+          Vue.$toast.open({
+            message: error.response.data.error,
+            type: 'error',
+          });
         })
         .finally(() => {
           this.loading = false;
         //   console.log("this.slides.length = ", this.slides.length);
           this.slides.length == 0 ? this.messageEmpty = 'Não encontramos slides :(' : '';
         });
-    }
+    },
   }
 };
 </script>
@@ -81,7 +131,9 @@ export default {
         padding-top: 100px;
         margin: 0;
         .shape-style-1 {
-            z-index: 1;
+          position: fixed;
+          z-index: 0;
+          height: 100vh;
         }
     }
 div#post-list {

@@ -42,17 +42,18 @@
                             </div> 
                         </div>
                         <div class="text-center mt-5">
-                            <h3>I.A.N.S.A 
-                            </h3>
-                            <h3>
-                                <span class="font-weight-light">Casa de apoio</span>
+                            <img src="../../public/img/brand/logo.png" class="img-description"/>
+                            <h3 style="padding: 10px;">
+                                <span class="font-weight-light">SOBRE A CASA DE APOIO</span>
                             </h3>
                         </div>
-                        <div class="mt-5 py-5 border-top text-center">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-9">
-                            <div class="h6 font-weight-300"><i class="ni location_pin mr-2"></i>Sobre o IANSA</div>
+                           <!-- <tabs-section></tabs-section> -->
 
+                        <div class="mt-5 py-5 border-top text-center">
+
+                            <div class="row justify-content-center">
+                            
+                                <div class="col-lg-9">
                                 <p>O I.A.N.S.A., Instituição de Apoio Nossa Senhora Aparecida, é uma iniciativa muito nobre, nascida na cidade de Franca, interior de SP, que apoia pessoas em situações de adoecimento, principalmente as que lutam incansavelmente contra o câncer, uma doença grave que infelizmente não escolhe suas vítimas e afeta tantos ao nosso redor.</p>
                                 <p>A Instituição acolhe com muito carinho e dignidade os pacientes em tratamento e também seus familiares, prestando-lhes solidariedade em um momento tão delicado de suas vidas, fazendo o máximo possível para que que ali, possam se sentir abraçados e recebidos com todos os cuidados que merecem, prezando pela excelência em tudo que possa oferecer aos acolhidos.</p>
                                 <p>A maior parte das pessoas que são recebidas e atendidas pela Instituição vem de outras cidades da região para tratamentos no Hospital do Câncer ou outros hospitais, e na grande maioria dos casos, não possuem recursos suficientes para passar horas, dias ou até semanas na cidade. </p>
@@ -72,16 +73,23 @@
     </div>
 </template>
 <script>
+import TabsSection from "./components/JavascriptComponents/TabsSection.vue";
     export default {
-        methods:{
-            menuSelected (){
-                localStorage.setItem("menuSelected", true);
-            }
-        },
-        created () {
-            this.menuSelected();
-        },
+      components: {
+        TabsSection
+      },
+      methods:{
+        menuSelected (){
+          localStorage.setItem("menuSelected", true);
+          }
+      },
+      created () {
+        this.menuSelected();
+      },
     };
 </script>
 <style>
+  .img-description {
+    width: 250px;
+  }
 </style>

@@ -31,13 +31,13 @@
             </template>
             <template>
               <div class="text-center text-muted mb-4">
-                <small>d\fhivjknsklf nslfbvSIlb</small>
+                <small>Informe suas credenciais</small>
               </div>
               <form role="form">
                 <base-input
                   alternative
                   class="mb-3"
-                  placeholder="Email"
+                  placeholder="E-mail"
                   addon-left-icon="ni ni-email-83"
                   v-model="email"
                 >
@@ -142,14 +142,14 @@ export default {
           if (response) {
             localStorage.setItem("user", JSON.stringify(response.data));
               Vue.$toast.open({
-                message: 'Bem-vindo!',
+                message: `Bem-vindo ${response.data.name} !`,
                 type: 'success',
               });
             this.$router.push({ path: "/" });
           }
         }).catch(error => {
               Vue.$toast.open({
-                message: 'Usuário ou senha inválidos!',
+                message: error.response.data.error,
                 type: 'error',
               });
         })

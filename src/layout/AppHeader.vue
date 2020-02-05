@@ -7,7 +7,7 @@
 
       <div class="row" slot="content-header" slot-scope="{closeMenu}">
         <div class="col-6 collapse-brand">
-          <a href="https://demos.creative-tim.com/vue-argon-design-system/documentation/">
+          <a href="#/">
             <img src="img/brand/iansa-logo.png" />
           </a>
         </div>
@@ -51,6 +51,11 @@
                 <span class="nav-link-inner--text">Nossa equipe</span>
             </a>
           </li>
+         <!-- <li class="nav-item" v-if="!menuSelected">
+            <a slot="title" href="#partners" v-smooth-scroll class="nav-link">
+                <span class="nav-link-inner--text">Nossos parceiros</span>
+            </a>
+          </li> -->
           <li class="nav-item">
             <router-link slot="title" class="nav-link" to="/transparency">
                 <span class="nav-link-inner--text">Tranparência</span>
@@ -239,5 +244,9 @@ ul.navbar-nav.navbar-nav-hover.align-items-lg-center a {
     width: 100%;
     align-items: flex-end;
   }
+}
+.dropdown-item.active, .dropdown-item:active {
+    color: #ab4a9e !important;
+    text-decoration: none;
 }
 </style>

@@ -42,16 +42,14 @@
                             </div> 
                         </div>
                         <div class="text-center mt-5">
-                            <h3>I.A.N.S.A 
-                            </h3>
-                            <h3>
-                                <span class="font-weight-light">Casa de apoio</span>
+                            <img src="../../public/img/brand/logo.png" class="img-description"/>
+                            <h3 style="padding: 10px;">
+                                <span class="font-weight-light">NOSSA HISTÓRIA</span>
                             </h3>
                         </div>
                         <div class="mt-5 py-5 border-top text-center">
                             <div class="row justify-content-center">
                                 <div class="col-lg-9">
-                            <div class="h6 font-weight-300"><i class="ni location_pin mr-2"></i>História</div>
                                 <p>Diagnosticada com câncer de mama em 2010, no auge de sua vida aos 43 anos de idade, Eliane Aparecida Bonine, assistente social, se viu em meio a um turbilhão de pensamentos, perguntas e incertezas. Com muita garra, força e fé, Eliane se agarrou à esperança de que poderia vencer aquela batalha e não se deixou abater. Sempre amparada por sua família, passou por uma cirurgia e inúmeros tratamentos quimioterápicos na busca pela certeza da cura, até que o milagre enfim  chegou e todas as incertezas foram transformadas em coragem e alimento para um grande projeto.</p>
                                 <p>Entre as idas e vindas aos hospitais para tratamento, Eliane pode perceber que outras pessoas em situações de saúde semelhantes ou tão mais grave quanto a sua, passavam por dificuldades, principalmente as mais carentes que não proviam de recursos para alimentação ou ainda para pernoitar na cidade, seja para continuar o tratamento ou para acompanhar um familiar hospitalizado.</p>
                                 <p>Eliane sentia nascer em seu coração um profundo desejo de fazer algo por aquelas pessoas que de forma silenciosa e sem saberem, clamavam por alguma ajuda. Percebeu então que na cidade não havia nenhuma casa de apoio ou centro de assistência que pudesse acolher e ajudar aquelas pessoas, principalmente as que vinham de longe para o tratamento.</p>

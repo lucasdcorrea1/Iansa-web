@@ -7,7 +7,7 @@
         </fade-transition>
       </main>
       <div>
-        <a href="#home" v-smooth-scroll class="fab first" v-if="showButtonTop">
+        <a href="#app" v-smooth-scroll class="fab first" v-if="showButtonTop">
           <i class="fa fa-arrow-up"></i>
         </a>
         <a href="https://pag.ae/bhg8d0n" target="blank" class="fab">
