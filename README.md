@@ -1,8 +1,8 @@
 # I.A.N.S.A
-> <p align="justify">Site iansa.</p>
   - [Preview](https://iansa-web.firebaseapp.com/);
-
-
+<p align="center">
+  <img src="./public/img/brand/iansa.gif" width="800px"/>
+</p>
 ## Technologies
 
   - Node.js ([Backend](https://github.com/lucasdcorrea1/Iansa-backend));
@@ -45,4 +45,4 @@ Please read [CONTRIBUTING](https://github.com/lucasdcorrea1/iansa-web) for detai
 
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 - **[MIT license](https://github.com/Data-Tongji/datatongji-backend/blob/master/LICENCE)**
-- Copyright 2019 © <a href="https://www.gitshowcase.com/lucasdcorrea1" target="_blank">Lucas Damas Corrêa</a> &  <a href="https://github.com/wesley-rocha" target="_blank">Wesley Pedro</a>.
+- Copyright 2019 © <a href="https://www.gitshowcase.com/lucasdcorrea1"target="_blank">Lucas Damas Corrêa</a> &  <a href="https://github.com/wesley-rocha" target="_blank">Wesley Pedro</a>.
