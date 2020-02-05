@@ -26,6 +26,7 @@ npm dev
 ## Authors
 
 [Lucas Damas](https://github.com/lucasdcorrea1) – lucas.dcorrea1@gmail.com
+
 [Wesley Pedro](https://github.com/https://github.com/wesley-rocha) – wesleypedro.r@gmail.com
 
 
