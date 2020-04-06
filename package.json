@@ -1,6 +1,6 @@
 {
-  "name": "vue-argon-design-system",
-  "version": "0.1.0",
+  "name": "iansa-web",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -26,7 +26,8 @@
     "vue-toast-notification": "0.0.3",
     "vue-upload-multiple-image": "^1.1.4",
     "vue2-transitions": "^0.2.3",
-    "vuex": "^3.1.2"
+    "vuex": "^3.1.2",
+    "webpack-merge": "^4.2.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.4.0",

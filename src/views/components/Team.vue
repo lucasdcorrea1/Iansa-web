@@ -129,62 +129,50 @@ export default {
     return {
       team: [
         {
-          image: '../public',
-          image: 'https://www.iansa.org.br/static/media/eliane.40db9e67.jpg',
+          image: './img/theme/AngelitaNeves.JPG',
           name: 'ELIANE BONINE',
-          office: 'Fundadora'
-        },
-        {
-          image: 'https://www.iansa.org.br/static/media/daniel.dd20aff7.jpg',
-          name: 'DANIEL MELO',
-          office: 'Fundador'
-        },
-        {
-          image: 'https://www.iansa.org.br/static/media/claudia.ec96f2a1.jpg',
-          name: 'CLÁUDIA BONINE',
-          office: 'Presidente'
-        },
-        {
-          image: 'https://www.iansa.org.br/static/media/cida.40b090ff.jpg',
-          name: 'CIDA HAJEL',
-          office: 'Captadora de Recursos'
-        },
-        {
-          image: 'https://www.iansa.org.br/static/media/adriana.000e1a80.jpg',
-          name: 'ADRIANA CRISTINA ALVES',
-          office: 'Assistente Social'
-        },
-        {
-          image: 'https://www.iansa.org.br/static/media/jennifer.ac494723.jpg',
-          name: 'JENIFFER BLOIS',
-          office: 'Psicóloga'
-        },
-        {
-          image: 'https://www.iansa.org.br/static/media/elaine.cca27989.jpg',
-          name: 'ELAINE ANDRADE',
           office: 'Serviços Gerais'
         },
         {
-          image: 'https://www.iansa.org.br/static/media/luciana.66146854.jpg',
-          name: 'LUCIANA NUNES',
-          office: 'Cozinheira'
+          image: './img/theme/AnaDosanjosGomes.JPG',
+          name: 'Ana Dos anjos Gomes',
+          office: 'Assistente Social'
         },
         {
-          image: 'https://www.iansa.org.br/static/media/angelita.8b6f6027.jpg',
-          name: 'ANGELITA NEVES',
-          office: 'Serviços Gerais',
+          image: './img/theme/AdrianaBatista.JPG',
+          name: 'Adriana Batista',
+          office: 'Coordenadora Geral'
+        },
+        {
+          image: './img/theme/RafaelAlves.JPG',
+          name: 'Rafael Alves',
+          office: 'Estagiário de Serviço Social'
+        },
+        {
+          image: './img/theme/LiviaBomfim.JPG',
+          name: 'Livia Bomfim',
+          office: 'Nutricionista'
+        },
+        {
+          image: './img/theme/CláudiaBonini.JPG',
+          name: 'Cláudia Bonini',
+          office: 'Motorista'
+        },
+        {
+          image: './img/theme/SimoneBonini.JPG',
+          name: 'Simone Bonini',
+          office: 'Coordenadora bazar'
+        },
+        {
+          image: './img/theme/CidaHajel.JPG',
+          name: 'Cida Hajel',
+          office: 'Captadora de recursos'
+        },
+        {
+          image: './img/theme/JenifferBlois.JPG',
+          name: 'Jeniffer Blois',
+          office: 'Psicóloga',
           top: true
-        },
-        {
-          image: 'https://www.iansa.org.br/static/media/simone.fa5f65a0.jpg',
-          name: 'SIMONE BONINE',
-          office: 'Serviços Gerais',
-          top: true
-        },
-        {
-          image: 'https://www.iansa.org.br/static/media/ana.fe1690ff.jpg',
-          name: 'ANA',
-          office: 'Auxiliar Administrativa'
         }
       ]
     }

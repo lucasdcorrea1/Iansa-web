@@ -60,8 +60,11 @@
                 hover
                 shadow
                 body-classes="py-5"
-                :style="`background-color: rgb(204, 10, 47);margin-top: 40px;`">
-                <img :src="`img/brand/bradesco-logo.png`" style="max-width: 50%;"/>
+                :style="`background-color: rgb(13, 76, 146);margin-top: 40px;`">
+                <img :src="`img/brand/caixa-logo.png`" 
+                      style="max-width: 50%;
+                            margin-top: 20px;
+                            margin-bottom: 7.2%;"/>
                 <h5 class="text-uppercase">Agência : 0263-1</h5>
                 <h5 class="text-uppercase">Conta Corrente : 133283-0</h5>
                 <h5 class="text-uppercase">CNPJ: 13.512.905/000192</h5>
@@ -115,38 +118,49 @@ export default {
 };
 </script>
 <style lang="scss">
-.text-uppercase { 
-  color: #fff !important;
-}
-.card-body {
-  cursor: pointer;
-  .donate-img {
-    max-width: 70px;
+  .text-uppercase { 
+      color: #fff !important;
   }
-  h6 {
-    color: #f5f5f5;
-    font-weight: bold;
-    font-size: 20px;
-    margin-top: 16px;
-  }
-  span {
-    color: #FF5722;
-    background-color: #f5f5f5;
-    font-size: 18px;
-  }
-  .donate-value {
-    font-size: 52px;
-    font-weight: 600;
-    color: #f5f5f5;
-  }
-  .btn-donate {
-    border-radius: 36px;
-    border: none;
-    background-color: rgba(255, 255, 255, 0.33);
-    width: 100%;
-    &:hover {
-     background-color: rgba(255, 255, 255, 0.55);
+  .card-body {
+      h5 {
+        padding: 5px;
+    }
+    cursor: pointer;
+    .donate-img {
+        max-width: 70px;
+    }
+    h6 {
+        color: #f5f5f5;
+      font-weight: bold;
+      font-size: 20px;
+      margin-top: 16px;
+    }
+    span {
+        color: #FF5722;
+      background-color: #f5f5f5;
+      font-size: 18px;
+    }
+    .donate-value {
+        font-size: 52px;
+      font-weight: 600;
+      color: #f5f5f5;
+    }
+    .btn-donate {
+        border-radius: 36px;
+      border: none;
+      background-color: rgba(255, 255, 255, 0.33);
+      width: 100%;
+      &:hover {
+         background-color: rgba(255, 255, 255, 0.55);
+      }
     }
   }
-}
+
+  @media all and (max-width: 990px) {
+    .card-body {
+      & h5 {
+        padding: 2.2px;
+      }
+    }
+  }
 </style>

@@ -30,7 +30,7 @@
                     </p>
                     <p class="mb-0 font-weight-light locale">Jardim Eden - Franca-SP</p>
                     <p class="mb-0 font-weight-light phone">
-                        <span class="phone">(16) 3409-261</span>
+                        <span class="phone">(16) 3409-2614</span>
                     </p>
                 </div>
                 <div class="col-md-4 contact">

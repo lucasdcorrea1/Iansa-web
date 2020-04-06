@@ -37,20 +37,20 @@ export default {
           link: 'https://cloudmed.io/'
         },
         {
-          image: './img/partners/allmark.png',
+          image: './img/partners/allmark.jpg',
           name: 'allmark',
           link: 'https://www.allmark.com.br/'
         },
-        {
-          image: './img/partners/francajel.png',
-          name: 'francajel',
-          link: 'https://www.francajelcalcados.com.br/'
-        },
-        {
-          image: './img/partners/chb.png',
-          name: 'chb',
-          link: 'https://chb.com.br/'
-        },
+        // {
+        //   image: './img/partners/francajel.png',
+        //   name: 'francajel',
+        //   link: 'https://www.francajelcalcados.com.br/'
+        // },
+        // {
+        //   image: './img/partners/chb.png',
+        //   name: 'chb',
+        //   link: 'https://chb.com.br/'
+        // },
         {
           image: './img/partners/4x4.jpg',
           name: 'GRUPO 4X4',

@@ -6,6 +6,12 @@ dist
 .env.local
 .env.*.local
 
+# firebase
+.firebaserc
+database.rules.json
+firebase.json
+.firebase
+
 # Log files
 npm-debug.log*
 yarn-debug.log*

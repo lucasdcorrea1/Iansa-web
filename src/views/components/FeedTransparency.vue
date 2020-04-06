@@ -87,6 +87,9 @@ export default {
   },
   created() {
     Vue.use(VueToast, {position: 'top-right'});
+
+
+    console.log('Variavel de Hambiente !' + process.env.SERVER);
     this.getFeed();
   },
   methods: {
