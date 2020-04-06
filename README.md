@@ -30,6 +30,8 @@ Run task server
 
 * 1.0.0
     * Published
+* 1.1.0
+    * development 10/06/2020
 
 ## Authors
 
@@ -46,6 +48,6 @@ Please read [CONTRIBUTING](https://github.com/lucasdcorrea1/iansa-web) for detai
 
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 - **[MIT license](https://github.com/Data-Tongji/datatongji-backend/blob/master/LICENCE)**
-- Copyright 2019 © <a href="https://www.gitshowcase.com/lucasdcorrea1" target="_blank">Lucas Damas</a>& <a href="https://dribbble.com/wesley-rocha" target="_blank">
+- Copyright 2020 © <a href="https://www.gitshowcase.com/lucasdcorrea1" target="_blank">Lucas Damas </a> & <a href="https://dribbble.com/wesley-rocha" target="_blank">
  Wesley Pedro 
 </a>.
