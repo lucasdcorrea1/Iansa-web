@@ -77,7 +77,8 @@
                 <div class="col-md-6">
                     <div class="copyright">
                         &copy; {{year}}
-                        <a href="https://www.iansa.org.br" target="_blank" rel="noopener">I.A.N.S.A</a>
+                        <a href="https://www.iansa.org.br" target="_blank" rel="noopener">I.A.N.S.A</a> & 
+                        <a href="https://github.com/lucasdcorrea1" target="_blank" rel="noopener">LUCAS</a>
                     </div>
                 </div>
                 <div class="col-md-6">

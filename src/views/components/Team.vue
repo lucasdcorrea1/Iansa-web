@@ -8,7 +8,7 @@
         <div class="at-column">
           <div class="at-user">
             <div class="at-user__avatar">
-              <img src="https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg" />
+              <img src="https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128-min.JPG" />
             </div>
             <div class="at-user__name">Aaron Rossi</div>
             <div class="at-user__title">CEO &amp; Co-Founder</div>
@@ -129,47 +129,47 @@ export default {
     return {
       team: [
         {
-          image: './img/theme/AngelitaNeves.JPG',
+          image: './img/theme/AngelitaNeves-min.JPG',
           name: 'ELIANE BONINE',
           office: 'Serviços Gerais'
         },
         {
-          image: './img/theme/AnaDosanjosGomes.JPG',
+          image: './img/theme/AnaDosanjosGomes-min.JPG',
           name: 'Ana Dos anjos Gomes',
           office: 'Assistente Social'
         },
         {
-          image: './img/theme/AdrianaBatista.JPG',
+          image: './img/theme/AdrianaBatista-min.JPG',
           name: 'Adriana Batista',
           office: 'Coordenadora Geral'
         },
         {
-          image: './img/theme/RafaelAlves.JPG',
+          image: './img/theme/RafaelAlves-min.JPG',
           name: 'Rafael Alves',
           office: 'Estagiário de Serviço Social'
         },
         {
-          image: './img/theme/LiviaBomfim.JPG',
+          image: './img/theme/LiviaBomfim-min.JPG',
           name: 'Livia Bomfim',
           office: 'Nutricionista'
         },
         {
-          image: './img/theme/CláudiaBonini.JPG',
+          image: './img/theme/CláudiaBonini-min.JPG',
           name: 'Cláudia Bonini',
           office: 'Motorista'
         },
         {
-          image: './img/theme/SimoneBonini.JPG',
+          image: './img/theme/SimoneBonini-min.JPG',
           name: 'Simone Bonini',
           office: 'Coordenadora bazar'
         },
         {
-          image: './img/theme/CidaHajel.JPG',
+          image: './img/theme/CidaHajel-min.JPG',
           name: 'Cida Hajel',
           office: 'Captadora de recursos'
         },
         {
-          image: './img/theme/JenifferBlois.JPG',
+          image: './img/theme/JenifferBlois-min.JPG',
           name: 'Jeniffer Blois',
           office: 'Psicóloga',
           top: true

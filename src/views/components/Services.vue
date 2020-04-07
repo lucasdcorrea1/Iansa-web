@@ -67,7 +67,7 @@
                                             </icon>
                                         </div>
                                         <div class="pl-4">
-                                            <h5 class="title text-success">Dormitórios</h5>
+                                            <h5 class="title text-success">Hospedagem</h5>
                                             <p>Acomodações para os beneficiários e familiares  trazendo conforto e descanso necessários.</p>
                                         </div>
                                     </div>
@@ -150,7 +150,7 @@
                                         </div>
                                         <div class="pl-4">
                                             <h5 class="title text-success">Bazar e Eventos</h5>
-                                            <p>Possuímos um brexó e também realizamos  eventos em prol do IANSA para arrecadação de fundos e doações.</p>
+                                            <p>Possuímos um brechó e também realizamos  eventos em prol do IANSA para arrecadação de fundos e doações.</p>
                                         </div>
                                     </div>
                                 </card>
